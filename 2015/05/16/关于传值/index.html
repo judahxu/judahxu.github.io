@@ -5,15 +5,18 @@
   
   <title>波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
+  <meta name="description" content="关于传值用法什么是KVC —-&amp;gt;WhatKVC指的就是NSKeyValueCoding非正式协议。 KVC是一种间接地访问对象的属性的机制。这种间接表现在通过字符串来标识属性,而不是通过调用存取方法或直接地访问实例变量的方式。KVC机制不仅支持对象,还支持标量和结构体类型,这些非对象的类型会被自动的装箱和开箱。    
+Key &amp;amp; Key Path键(Key)是一个字符串用来标识对象">
+<meta property="og:type" content="article">
 <meta property="og:title" content="波澜海底心">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/05/16/关于传值/index.html">
 <meta property="og:site_name" content="波澜海底心">
-<meta property="og:description">
+<meta property="og:description" content="关于传值用法什么是KVC —-&amp;gt;WhatKVC指的就是NSKeyValueCoding非正式协议。 KVC是一种间接地访问对象的属性的机制。这种间接表现在通过字符串来标识属性,而不是通过调用存取方法或直接地访问实例变量的方式。KVC机制不仅支持对象,还支持标量和结构体类型,这些非对象的类型会被自动的装箱和开箱。    
+Key &amp;amp; Key Path键(Key)是一个字符串用来标识对象">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="波澜海底心">
-<meta name="twitter:description">
+<meta name="twitter:description" content="关于传值用法什么是KVC —-&amp;gt;WhatKVC指的就是NSKeyValueCoding非正式协议。 KVC是一种间接地访问对象的属性的机制。这种间接表现在通过字符串来标识属性,而不是通过调用存取方法或直接地访问实例变量的方式。KVC机制不仅支持对象,还支持标量和结构体类型,这些非对象的类型会被自动的装箱和开箱。    
+Key &amp;amp; Key Path键(Key)是一个字符串用来标识对象">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -189,9 +192,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-关于传值" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于传值" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/05/16/关于传值/" class="article-date">
@@ -241,212 +242,61 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/15/关于C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">有关C的问题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
-
-  
-    <article id="post-关于C" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/15/关于C/" class="article-date">
-  	<time datetime="2015-05-15T10:11:23.000Z" itemprop="datePublished">2015-05-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/15/关于C/">有关C的问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-_程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?">1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?</h3><p>C源代码 －&gt; 预处理器 －&gt; 编译器 －&gt; 汇编器 -&gt; 链接器 -&gt; 转换为可执行的文件</p>
-<pre><code><span class="bullet">1. </span>C源代码经过预处理器其结果，还是C语言
-
-<span class="bullet">2. </span>预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
-
-<span class="bullet">3. </span>汇编代码结过汇编器其结果是中间代码（.o），其本质上也是二进制代码
-
-<span class="bullet">4. </span>中间文件（.o）经过链接器的链接， 最后生成可执行的文件。
-</code></pre><h3 id="2-Ｃ语言里比较灵活的一块内容是指针，_那么请谈谈你对指针的理解。">2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。</h3><pre><code>回答这个问题的思路：
-1､什么是指针，指针的基本概念
-2.指针的使用场景
-3.结合具体的例子，来说明一个， 用指针来解决那些问题。
-4.关于指针运算的问题。
-</code></pre><h3 id="3-Ｃ语言内存布局">3.Ｃ语言内存布局</h3><p><img src="/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png" alt="Mou icon"> </p>
-<pre><code><span class="number">1.</span>代码区：主要是存放代码，也就是程序指令。这个区的数据是只读
-
-<span class="number">2.</span>数据区，已初始区，声明全局变量的时候，同时给出了值， 那么这个变量就会放到已初始化。未初始化区：BSS,对于这个区的变量， 默认情况下， 全部初始为<span class="number">0</span>  
-
-<span class="number">3.</span>堆区:是程序员接触最多的区域。<span class="built_in">malloc</span>函数就是从这个区来分配内存的， 这个区是从下往上扩展
-
-<span class="number">4.</span>栈区：是由系统来管理的内存区域。局部变量，函数调用也在这个区，先进后出。
-
-<span class="number">5.</span>命令参数及环境变量区
-</code></pre><h3 id="4-Ｃ语言中const_关键字的理解">4.Ｃ语言中const 关键字的理解</h3><h5 id="a-_对于非指针变量的修饰_比int_const关键字可以放到int_之前，_也可放到int之后，_如const_int_myInt;_int_const_myInt;它们所表达的含义是一样的，_都是表示myInt是一个常量。_不能修改myInt的值。_我们推荐使用const_int_myInt;">a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;</h5><h5 id="b-_对于指针变量的声明，_有四种情况_以int_*_为例">b. 对于指针变量的声明， 有四种情况 以int * 为例</h5><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">const</span> <span class="keyword">int</span> * pMyPointer </span><br><span class="line"><span class="number">2.</span> <span class="keyword">int</span> <span class="keyword">const</span> * pMyPointer </span><br><span class="line"><span class="number">3.</span> <span class="keyword">int</span> * <span class="keyword">const</span> pMyPointer; </span><br><span class="line"><span class="number">4.</span> <span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> pMyPointer</span><br></pre></td></tr></table></figure>
-<p>对于1、2两种情况， 所表达的含义是一样的， 表示指针指指向的内容不能修改。</p>
-<p>对于第3种情况， 所表达的含义是说指针本身不能再指向其它地址</p>
-<p>对于第4种情况， 表明指针指向的内容不能修改， 同时指针本身也没能再指向其它地址。</p>
-<h3 id="在继承语法中，_关于OC的方法调度机制">在继承语法中， 关于OC的方法调度机制</h3><pre><code><span class="number">1</span>､每一个对象，都有一个指针指向其类
-<span class="number">2.</span>当向对象发送消息， 对象准备执行方法的时候，它会先在当前对象对属的类中查找这个方法， 如果找到话就开始执行， 如果没有找到的话， 就去对象所属类的父类去查找， 如果找到就执行， 如果没有找到， 则会沿着继承链一层一层的向上去查找， 直到<span class="built_in">NSObject</span> 类， 如果找到则执行， 如果没有找到， 则首先编译器会给出一个警告， 如果忽略了这个警告，则在运行时程序会崩溃。
-</code></pre><h3 id="在继承中，_子类对象是如何说父类声明的成员变量的？">在继承中， 子类对象是如何说父类声明的成员变量的？</h3><p>在创建一个新类的时候， 其对象会首先从父类中继承成员变量， 然后添加自身的成员变量。</p>
-<h3 id="谈谈你对OC中self_和_super的理解？">谈谈你对OC中self 和 super的理解？</h3><pre><code><span class="number">1</span>.<span class="keyword">self</span> 首先他是一个指针。
-<span class="number">2</span>.当向对象发送消息， 对象去调用对应的方法的时候， 在调用方法中， 在这个方法里，隐藏传了一个指针， 这个指针就是<span class="keyword">self</span>，这个<span class="keyword">self</span> 代表的是调用这个方法的消息接收者。
-<span class="number">3</span>. 有时候， 我们需要在子类里显式的调用父的方法， 这个时候 <span class="keyword">super</span>可以代表父类， 需要注意的是， 这个<span class="keyword">super</span>不是指针，也不是成员变量， 而它只是编译器识别的指令， 主要就用于子类访问父类的内容。
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于传值" data-title="" data-url="http://yoursite.com/2015/05/16/关于传值/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-
-
-
-  
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/04/19/test/" class="article-date">
-  	<time datetime="2015-04-19T07:43:42.000Z" itemprop="datePublished">2015-04-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/19/test/">博客终于搞得像样了</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每天学习一点点..错误一点点，正确一点点，加油！木有什么难的！<br>现在是模仿阶段，在复制中摸索。。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/04/19/hello-world/" class="article-date">
-  	<time datetime="2015-04-19T07:26:00.000Z" itemprop="datePublished">2015-04-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
