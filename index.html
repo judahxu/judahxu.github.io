@@ -195,7 +195,7 @@
   
     <div class="article-meta">
       <a href="/2015/05/16/关于传值/" class="article-date">
-  	<time datetime="2015-05-16T12:45:34.000Z" itemprop="datePublished">2015-05-16</time>
+  	<time datetime="2015-05-16T12:57:16.000Z" itemprop="datePublished">2015-05-16</time>
 </a>
     </div>
   
@@ -222,30 +222,42 @@
 <h4 id="如何使用KVC">如何使用KVC</h4><p>KVC常用于MVC中Model与Controller之间的通信。 </p>
 <pre><code>￼￼- (<span class="keyword">void</span>)setValue:(<span class="keyword">id</span>)value forKey:(<span class="built_in">NSString</span> *)key        
 - (<span class="keyword">id</span>)valueForKey:(<span class="built_in">NSString</span> *)key      
-- (<span class="keyword">void</span>)setNilValueForKey:(<span class="built_in">NSString</span> *)key       
-￼￼- (<span class="keyword">void</span>)setValue:(<span class="keyword">id</span>)value forKeyPath:(<span class="built_in">NSString</span> *)keyPath
-￼- (<span class="keyword">id</span>)valueForKeyPath:(<span class="built_in">NSString</span> *)keyPath     
-￼- (<span class="keyword">id</span>)valueForUndefinedKey:(<span class="built_in">NSString</span> *)key      
-￼￼￼￼
-</code></pre><p>KVC与点语法是正交的,也就是一点关系都没有<br>The accessor patterns are written in the form -set<key>: or -<key>     </key></key></p>
+- (<span class="keyword">void</span>)setNilValueForKey:(<span class="built_in">NSString</span> *)key                 - (<span class="keyword">void</span>)setValue:(<span class="keyword">id</span>)value forKeyPath:(<span class="built_in">NSString</span>  *)keyPath
+￼- (<span class="keyword">id</span>)valueForKeyPath:(<span class="built_in">NSString</span> *)keyPath                  - (<span class="keyword">id</span>)valueForUndefinedKey:(<span class="built_in">NSString</span> *)key      
+</code></pre><p>￼￼￼￼</p>
+<p>KVC与点语法是正交的,也就是一点关系都没有<br>The accessor patterns are written in the form -set<key>: or -<key>     </key></key></p>
 <h4 id="什么是KVO">什么是KVO</h4><p>键值观察(Key-value observing)是一种机制。这种机制允许当一个对象的某些属性的值被修改 后会通知另外观察该变化的对象。       </p>
-<h4 id="￼如何使用KVO">￼如何使用KVO</h4><pre><code>￼￼￼￼- (<span class="typename">void</span>)<span class="string">addObserver:</span>(NSObject *)anObserver <span class="string">forKeyPath:</span>(NSString *)keyPath         
-<span class="string">options:</span>(NSKeyValueObservingOptions)options <span class="string">context:</span>(<span class="typename">void</span> *)context         
-- (<span class="typename">void</span>)<span class="string">removeObserver:</span>(NSObject *)anObserver <span class="string">forKeyPath:</span>(NSString *)keyPath       
-- (<span class="typename">void</span>)<span class="string">observeValueForKeyPath:</span>(NSString *)keyPath <span class="string">ofObject:</span>(id)object       
-<span class="string">change:</span>(NSDictionary *)change <span class="string">context:</span>(<span class="typename">void</span> *)context
+<h4 id="￼如何使用KVO">￼如何使用KVO</h4><pre><code>- (<span class="typename">void</span>)<span class="string">addObserver:</span>(NSObject *)anObserver <span class="string">forKeyPath:</span>(NSString *)keyPath <span class="string">options:</span>(NSKeyValueObservingOptions)options <span class="string">context:</span>(<span class="typename">void</span> *)context                                                     - (<span class="typename">void</span>)<span class="string">removeObserver:</span>(NSObject *)anObserver <span class="string">forKeyPath:</span>(NSString *)keyPath                           - (<span class="typename">void</span>)<span class="string">observeValueForKeyPath:</span>(NSString *)keyPath <span class="string">ofObject:</span>(id)object <span class="string">change:</span>(NSDictionary *)change <span class="string">context:</span>(<span class="typename">void</span> *)context
 </code></pre><h4 id="利用通知中心传值(NSNotificationCenter)">利用通知中心传值(NSNotificationCenter)</h4><p>1.接受传过来的值       </p>
-<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">[<span class="list">[<span class="keyword">NSNotificationCenter</span> defaultCenter] addObserver:self  selector:@selector<span class="list">(<span class="keyword">demo:</span>)</span> name:@<span class="string">"hello"</span> object:@<span class="string">"hello"</span>]<span class="comment">;            </span></span><br><span class="line">- <span class="list">(<span class="keyword">void</span>)</span>demo:<span class="list">(<span class="keyword">NSNotification</span> *)</span>noti      </span><br><span class="line">&#123;     </span><br><span class="line">    NSLog<span class="list">(<span class="keyword">@</span><span class="string">"%@"</span>,noti.userInfo<span class="list">[<span class="keyword">@</span><span class="string">"hello"</span>])<span class="comment">;      </span></span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">```   </span><br><span class="line"> </span><br><span class="line"><span class="number">2</span>.发送通知并传值<span class="list">(<span class="keyword">利用字典可以传多个值</span>)</span></span></span></span></span></span><br></pre></td></tr></table></figure>
-<p>NSString <em>str = @”one”;<br>NSDictionary </em>dic = @{@”hello”: str};<br>[[NSNotificationCenter defaultCenter]    postNotificationName:@”hello” object:@”hello” userInfo:dic];<br>￼￼￼￼￼￼￼</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line">附：注册键盘升启关闭消息</span><br></pre></td></tr></table></figure>
-<p>//键盘升起<br>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];<br>//键盘降下<br>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">####用 storyBoard 在界面之间传值</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>(void)prepareForSegue:(UIStoryboardSegue <em>)segue sender:(id)sender<br>{<br>  UITableViewCell </em>cell = (UITableViewCell <em>)sender;<br>  NSIndexPath </em>indexPath =  [self.tableView indexPathForCell:cell];<br>  id model = _students[indexPath.row];<br>  //组装模型<br>  NSString <em>name = [model valueForKey:kName];<br>  NSString </em>ID = [model valueForKey:kStuID];<br>  int age = [[model valueForKey:kAge] intValue];    </p>
-<p>  QYStudentModel <em>student = [QYStudentModel studentWithName:name ID:ID andAge:age];<br>  UIViewController </em>dstVC = segue.destinationViewController;<br>  [dstVC setValue:student forKey:@”student”];<br>} </p>
-</li>
-</ul>
-<p>```  </p>
+<pre><code> <span class="attr_selector">[[NSNotificationCenter defaultCenter]</span> <span class="rule"><span class="attribute">addObserver</span>:<span class="value">self  selector:@<span class="function">selector</span>(demo:) name:@<span class="string">"hello"</span> object:@<span class="string">"hello"</span>]</span></span>;            
+<span class="tag">-</span> (<span class="tag">void</span>)<span class="rule"><span class="attribute">demo</span>:<span class="value">(NSNotification *)noti      
+{     
+<span class="function">NSLog</span>(@<span class="string">"%@"</span>,noti.userInfo[@<span class="string">"hello"</span>])</span></span>;      
+}  
+</code></pre><p>2.发送通知并传值(利用字典可以传多个值)</p>
+<pre><code>NSString *str = @<span class="string">"one"</span>;      
+NSDictionary *dic = @{@<span class="string">"hello"</span>: str};      
+[[NSNotificationCenter defaultCenter]    <span class="string">postNotificationName:</span>@<span class="string">"hello"</span> <span class="string">object:</span>@<span class="string">"hello"</span> <span class="string">userInfo:</span>dic];      
+</code></pre><p>￼￼￼￼￼<br>附：注册键盘升启关闭消息  </p>
+<pre><code><span class="comment">//键盘升起             </span>
+<span class="attr_selector">[[NSNotificationCenter defaultCenter]</span> <span class="tag">addObserver</span><span class="pseudo">:self</span> <span class="tag">selector</span>:@<span class="tag">selector</span>(<span class="attribute">keyboardWillShow</span>:) <span class="tag">name</span><span class="pseudo">:UIKeyboardWillShowNotification</span> <span class="tag">object</span><span class="pseudo">:nil</span>];
+<span class="comment">//键盘降下         </span>
+<span class="attr_selector">[[NSNotificationCenter defaultCenter]</span> <span class="tag">addObserver</span><span class="pseudo">:self</span> <span class="tag">selector</span>:@<span class="tag">selector</span>(<span class="attribute">keyboardWillHide</span>:) <span class="tag">name</span><span class="pseudo">:UIKeyboardWillHideNotification</span> <span class="tag">object</span><span class="pseudo">:nil</span>];
+</code></pre><h4 id="用_storyBoard_在界面之间传值">用 storyBoard 在界面之间传值</h4><pre><code>- (<span class="typename">void</span>)<span class="string">prepareForSegue:</span>(UIStoryboardSegue *)segue <span class="string">sender:</span>(id)sender     
+{      
+UITableViewCell *cell = (UITableViewCell *)sender;     
+NSIndexPath *indexPath =  [self.tableView <span class="string">indexPathForCell:</span>cell];      
+id model = _students[indexPath.row];      
+<span class="comment">//组装模型        </span>
+NSString *name = [model <span class="string">valueForKey:</span>kName];   
+NSString *ID = [model <span class="string">valueForKey:</span>kStuID];    
+<span class="typename">int</span> age = [[model <span class="string">valueForKey:</span>kAge] intValue];    
 
+QYStudentModel *student = [QYStudentModel <span class="string">studentWithName:</span>name <span class="string">ID:</span>ID <span class="string">andAge:</span>age];    
+UIViewController *dstVC = segue.destinationViewController;      
+[dstVC <span class="string">setValue:</span>student <span class="string">forKey:</span>@<span class="string">"student"</span>];    
+ } 
+</code></pre>
       
     </div>
     
