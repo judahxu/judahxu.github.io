@@ -205,7 +205,7 @@ git remote add origin git@github.com:winter1991/hel">
   
     <div class="article-meta">
       <a href="/2015/05/27/关于的git的学习/" class="article-date">
-  	<time datetime="2015-05-27T13:04:58.000Z" itemprop="datePublished">2015-05-27</time>
+  	<time datetime="2015-05-27T13:11:40.000Z" itemprop="datePublished">2015-05-27</time>
 </a>
     </div>
   
@@ -288,29 +288,28 @@ git config --list
     出现 Hi xxx! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access. 说明配置成功，可以连接上 Github</span>
 </code></pre><ol>
 <li><p>建立仓库 repository ：</p>
-<pre><code>git init here       -- 创建本地仓库
+<pre><code>git init here       创建本地仓库
 git remote add origin git@github<span class="class">.com</span>:用户名/仓库名<span class="class">.git</span>
- -- 把本地仓库和远程仓库关联起来， 如果不执行这个命令的话，每次 push 的时候都需要指定远程服务器的地址
+把本地仓库和远程仓库关联起来， 如果不执行这个命令的话，每次 push 的时候都需要指定远程服务器的地址
 </code></pre></li>
 </ol>
 <ol>
 <li><p>从远程仓库中下载新的改动：</p>
 <pre><code>git pull origin master
-
-$ git fetch origin    <span class="comment">//取得远程更新，这里可以看做是准备要取了</span>
-$ git merge origin<span class="regexp">/master  /</span><span class="regexp">/把更新的内容合并到本地分支/m</span>aster
+$ git fetch origin    取得远程更新，这里可以看做是准备要取了
+$ git <span class="operator"><span class="keyword">merge</span> origin/<span class="keyword">master</span>  把更新的内容合并到本地分支/<span class="keyword">master</span></span>
 </code></pre></li>
 </ol>
 <ol>
 <li><p>提交本地修改到远程仓库中：</p>
-<pre><code>git <span class="built_in">add</span>
-git <span class="built_in">add</span> -A      <span class="comment">-- 将改动添加到本地仓库中</span>
-git rm xxx      <span class="comment">-- 从本地仓库中删除指定文件</span>
-git rm -r xxx   <span class="comment">-- 从本地仓库中删除指定文件夹</span>
+<pre><code>git <span class="keyword">add</span>
+git <span class="keyword">add</span> -A       将改动添加到本地仓库中
+git rm xxx       从本地仓库中删除指定文件
+git rm -r xxx    从本地仓库中删除指定文件夹
 
-git commit -m <span class="string">"注释"</span>    <span class="comment">-- 把本机缓存中的内容提交到本机的 HEAD 里面</span>
-$ git remote -v <span class="comment"> //查看你当前项目远程连接的是哪个仓库地址。</span>
-git push origin master      <span class="comment">-- 把本地的 commit push 到远程仓库中</span>
+git commit -m <span class="string">"注释"</span>     把本机缓存中的内容提交到本机的 HEAD 里面
+$ git remote -v  查看你当前项目远程连接的是哪个仓库地址。
+git <span class="keyword">push</span> origin master       把本地的 commit <span class="keyword">push</span> 到远程仓库中
 </code></pre></li>
 </ol>
 <ol>
