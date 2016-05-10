@@ -38,7 +38,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">任性有我，不一样的花火</p>
+		<p class="header-subtitle">专注向上</p>
 		
 
 		
@@ -167,7 +167,7 @@
 			  <h1 class="header-author">Judahxu</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">任性有我，不一样的花火</p>
+			<p class="header-subtitle">专注向上</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -205,7 +205,7 @@
   
     <div class="article-meta">
       <a href="/2016/05/10/总结的技术实用网站/" class="article-date">
-  	<time datetime="2016-05-10T09:01:42.000Z" itemprop="datePublished">2016-05-10</time>
+  	<time datetime="2016-05-10T09:42:23.000Z" itemprop="datePublished">2016-05-10</time>
 </a>
     </div>
   
@@ -263,6 +263,90 @@ $ <span class="hexcolor">#def</span>ine <span class="function"><span class="titl
 
 <span class="variable">$sudo</span> pmset -<span class="tag">a</span> standby <span class="number">0</span> sleep <span class="number">20</span> hibernatemode <span class="number">3</span> networkoversleep <span class="number">0</span> force Mac不允许睡眠    
 </code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-setUpBlog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/13/setUpBlog/" class="article-date">
+  	<time datetime="2015-07-13T11:45:29.000Z" itemprop="datePublished">2015-07-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/13/setUpBlog/">setUpBlog</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="安装brew">安装brew</h5><p>执行命令</p>
+<pre><code><span class="number">1</span>$ ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span>
+</code></pre><h6 id="安装wget">安装wget</h6><p>执行命令</p>
+<pre><code>$ brew <span class="keyword">install</span> wget
+</code></pre><h6 id="安装nvm(node-js的版本管理工具)">安装nvm(node.js的版本管理工具)</h6><pre><code>$ wget -qO- http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span>
+</code></pre><h6 id="添加如下内容到~/-zshrc_配置文件">添加如下内容到~/.zshrc 配置文件</h6><pre><code>[ -s <span class="string">"/Users/<span class="escape">`u</span>sers<span class="escape">`/</span>.nvm/nvm.sh"</span> ] &amp;&amp; . <span class="string">"/Users/<span class="escape">`u</span>sers<span class="escape">`/</span>.nvm/nvm.sh"</span> # This loads nvm
+</code></pre><h6 id="安装node-js(通过nvm安装)">安装node.js(通过nvm安装)</h6><pre><code>$ nvm <span class="keyword">install</span> <span class="number">0.10</span>
+</code></pre><h6 id="安装hexo">安装hexo</h6><pre><code>$ npm <span class="keyword">install</span> -g hexo
+</code></pre><h6 id="创建hexo文件夹，并安装hexo组件">创建hexo文件夹，并安装hexo组件</h6><pre><code><span class="variable">$ </span>hexo init hexo
+<span class="variable">$ </span>cd hexo
+<span class="variable">$ </span>npm install
+</code></pre><h6 id="查看本地">查看本地</h6><p>输⼊入如下命令后,打开浏览器,并输⼊入localhost:4000来查看</p>
+<pre><code><span class="variable">$ </span>hexo g
+<span class="variable">$ </span>hexo s
+</code></pre><h6 id="登录github-com注册github账号">登录github.com注册github账号</h6><p>创建与github同名的repository</p>
+<p>eg : github账号名位lfxfengxia,则创建lfxfengxia.github.io</p>
+<h6 id="部署到github上">部署到github上</h6><p>如下所示编辑_config.yml</p>
+<pre><code><span class="attribute">deploy</span>: 
+<span class="attribute">type</span>: github
+<span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:dorayox/dorayox.github.io.git
+<span class="attribute">branch</span>: master
+</code></pre><p>输入如下命令，完成到github的部署，之后打开浏览器并输入judagxu.github.io来查看</p>
+<pre><code><span class="variable">$ </span>hexo g
+<span class="variable">$ </span>hexo d
+</code></pre><h6 id="上传文件到blog">上传文件到blog</h6><p>在hexo目录下，创建新文件</p>
+<p>eg : 创建新文件test</p>
+<pre><code>$ hexo <span class="keyword">new</span> test
+</code></pre><p>默认创建的新文件后缀问 .md文件，存在hexo/source/_posts/目录下</p>
+<p>使用MOU打开新建的文件并完成编辑</p>
+<pre><code>$ mou <span class="keyword">source</span><span class="regexp">/_posts/</span>test.md
+</code></pre><p>将新建的文件声称网页</p>
+<pre><code><span class="variable">$ </span>hexo g
+</code></pre><p>上传到blog</p>
+<pre><code><span class="variable">$ </span>hexo d
+</code></pre><p>登录blog查看是否上传成功</p>
+<p><a href="http://judahxu.github.io" target="_blank" rel="external">http://judahxu.github.io</a></p>
+
       
     </div>
     
@@ -565,90 +649,6 @@ UIViewController *dstVC = segue.destinationViewController;
 <span class="number">2</span>.当向对象发送消息， 对象去调用对应的方法的时候， 在调用方法中， 在这个方法里，隐藏传了一个指针， 这个指针就是<span class="keyword">self</span>，这个<span class="keyword">self</span> 代表的是调用这个方法的消息接收者。
 <span class="number">3</span>. 有时候， 我们需要在子类里显式的调用父的方法， 这个时候 <span class="keyword">super</span>可以代表父类， 需要注意的是， 这个<span class="keyword">super</span>不是指针，也不是成员变量， 而它只是编译器识别的指令， 主要就用于子类访问父类的内容。
 </code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-setUpBlog" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/13/setUpBlog/" class="article-date">
-  	<time datetime="2015-07-13T11:45:29.000Z" itemprop="datePublished">2015-07-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/13/setUpBlog/">setUpBlog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="安装brew">安装brew</h5><p>执行命令</p>
-<pre><code><span class="number">1</span>$ ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span>
-</code></pre><h6 id="安装wget">安装wget</h6><p>执行命令</p>
-<pre><code>$ brew <span class="keyword">install</span> wget
-</code></pre><h6 id="安装nvm(node-js的版本管理工具)">安装nvm(node.js的版本管理工具)</h6><pre><code>$ wget -qO- http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span>
-</code></pre><h6 id="添加如下内容到~/-zshrc_配置文件">添加如下内容到~/.zshrc 配置文件</h6><pre><code>[ -s <span class="string">"/Users/<span class="escape">`u</span>sers<span class="escape">`/</span>.nvm/nvm.sh"</span> ] &amp;&amp; . <span class="string">"/Users/<span class="escape">`u</span>sers<span class="escape">`/</span>.nvm/nvm.sh"</span> # This loads nvm
-</code></pre><h6 id="安装node-js(通过nvm安装)">安装node.js(通过nvm安装)</h6><pre><code>$ nvm <span class="keyword">install</span> <span class="number">0.10</span>
-</code></pre><h6 id="安装hexo">安装hexo</h6><pre><code>$ npm <span class="keyword">install</span> -g hexo
-</code></pre><h6 id="创建hexo文件夹，并安装hexo组件">创建hexo文件夹，并安装hexo组件</h6><pre><code><span class="variable">$ </span>hexo init hexo
-<span class="variable">$ </span>cd hexo
-<span class="variable">$ </span>npm install
-</code></pre><h6 id="查看本地">查看本地</h6><p>输⼊入如下命令后,打开浏览器,并输⼊入localhost:4000来查看</p>
-<pre><code><span class="variable">$ </span>hexo g
-<span class="variable">$ </span>hexo s
-</code></pre><h6 id="登录github-com注册github账号">登录github.com注册github账号</h6><p>创建与github同名的repository</p>
-<p>eg : github账号名位lfxfengxia,则创建lfxfengxia.github.io</p>
-<h6 id="部署到github上">部署到github上</h6><p>如下所示编辑_config.yml</p>
-<pre><code><span class="attribute">deploy</span>: 
-<span class="attribute">type</span>: github
-<span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:dorayox/dorayox.github.io.git
-<span class="attribute">branch</span>: master
-</code></pre><p>输入如下命令，完成到github的部署，之后打开浏览器并输入judagxu.github.io来查看</p>
-<pre><code><span class="variable">$ </span>hexo g
-<span class="variable">$ </span>hexo d
-</code></pre><h6 id="上传文件到blog">上传文件到blog</h6><p>在hexo目录下，创建新文件</p>
-<p>eg : 创建新文件test</p>
-<pre><code>$ hexo <span class="keyword">new</span> test
-</code></pre><p>默认创建的新文件后缀问 .md文件，存在hexo/source/_posts/目录下</p>
-<p>使用MOU打开新建的文件并完成编辑</p>
-<pre><code>$ mou <span class="keyword">source</span><span class="regexp">/_posts/</span>test.md
-</code></pre><p>将新建的文件声称网页</p>
-<pre><code><span class="variable">$ </span>hexo g
-</code></pre><p>上传到blog</p>
-<pre><code><span class="variable">$ </span>hexo d
-</code></pre><p>登录blog查看是否上传成功</p>
-<p><a href="http://judahxu.github.io" target="_blank" rel="external">http://judahxu.github.io</a></p>
-
       
     </div>
     
