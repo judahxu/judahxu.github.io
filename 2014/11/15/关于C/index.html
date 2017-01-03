@@ -13,7 +13,7 @@
 3. 汇编代码结过汇编器其结果是中间代码（.o），其本质上也">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有关C的问题">
-<meta property="og:url" content="http://yoursite.com/2015/07/13/关于C/index.html">
+<meta property="og:url" content="http://yoursite.com/2014/11/15/关于C/index.html">
 <meta property="og:site_name" content="波澜海底心">
 <meta property="og:description" content="1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?C源代码 －&amp;gt; 预处理器 －&amp;gt; 编译器 －&amp;gt; 汇编器 -&amp;gt; 链接器 -&amp;gt; 转换为可执行的文件
 1. C源代码经过预处理器其结果，还是C语言
@@ -21,7 +21,8 @@
 2. 预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
 
 3. 汇编代码结过汇编器其结果是中间代码（.o），其本质上也">
-<meta property="og:image" content="/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png">
+<meta property="og:image" content="http://yoursite.com/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png">
+<meta property="og:updated_time" content="2015-05-15T10:11:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关C的问题">
 <meta name="twitter:description" content="1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?C源代码 －&amp;gt; 预处理器 －&amp;gt; 编译器 －&amp;gt; 汇编器 -&amp;gt; 链接器 -&amp;gt; 转换为可执行的文件
@@ -30,13 +31,14 @@
 2. 预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
 
 3. 汇编代码结过汇编器其结果是中间代码（.o），其本质上也">
+<meta name="twitter:image" content="http://yoursite.com/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
   
     <link rel="icon" href="/judahxu.jpg">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 </head>
 <body>
@@ -131,7 +133,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/测试/" style="font-size: NaNpx;">测试</a>
+						<a href="/tags/测试/" style="font-size: 10px;">测试</a>
 					</div>
 				</section>
 				
@@ -214,8 +216,8 @@
       <div class="body-wrap"><article id="post-关于C" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/13/关于C/" class="article-date">
-  	<time datetime="2015-07-13T11:45:29.000Z" itemprop="datePublished">2015-07-13</time>
+      <a href="/2014/11/15/关于C/" class="article-date">
+  	<time datetime="2014-11-15T07:07:42.000Z" itemprop="datePublished">2014-11-15</time>
 </a>
     </div>
   
@@ -244,39 +246,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-_程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?">1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?</h3><p>C源代码 －&gt; 预处理器 －&gt; 编译器 －&gt; 汇编器 -&gt; 链接器 -&gt; 转换为可执行的文件</p>
-<pre><code><span class="bullet">1. </span>C源代码经过预处理器其结果，还是C语言
+        <h3 id="1-程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）"><a href="#1-程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）" class="headerlink" title="1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?"></a>1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?</h3><p>C源代码 －&gt; 预处理器 －&gt; 编译器 －&gt; 汇编器 -&gt; 链接器 -&gt; 转换为可执行的文件</p>
+<pre><code>1. C源代码经过预处理器其结果，还是C语言
 
-<span class="bullet">2. </span>预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
+2. 预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
 
-<span class="bullet">3. </span>汇编代码结过汇编器其结果是中间代码（.o），其本质上也是二进制代码
+3. 汇编代码结过汇编器其结果是中间代码（.o），其本质上也是二进制代码
 
-<span class="bullet">4. </span>中间文件（.o）经过链接器的链接， 最后生成可执行的文件。
-</code></pre><h3 id="2-Ｃ语言里比较灵活的一块内容是指针，_那么请谈谈你对指针的理解。">2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。</h3><pre><code>回答这个问题的思路：
+4. 中间文件（.o）经过链接器的链接， 最后生成可执行的文件。
+</code></pre><h3 id="2-C语言里比较灵活的一块内容是指针，-那么请谈谈你对指针的理解。"><a href="#2-C语言里比较灵活的一块内容是指针，-那么请谈谈你对指针的理解。" class="headerlink" title="2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。"></a>2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。</h3><pre><code>回答这个问题的思路：
 1､什么是指针，指针的基本概念
 2.指针的使用场景
 3.结合具体的例子，来说明一个， 用指针来解决那些问题。
 4.关于指针运算的问题。
-</code></pre><h3 id="3-Ｃ语言内存布局">3.Ｃ语言内存布局</h3><p><img src="/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png" alt="Mou icon"> </p>
-<pre><code><span class="number">1.</span>代码区：主要是存放代码，也就是程序指令。这个区的数据是只读
+</code></pre><h3 id="3-C语言内存布局"><a href="#3-C语言内存布局" class="headerlink" title="3.Ｃ语言内存布局"></a>3.Ｃ语言内存布局</h3><p><img src="/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png" alt="Mou icon"> </p>
+<pre><code>1.代码区：主要是存放代码，也就是程序指令。这个区的数据是只读
 
-<span class="number">2.</span>数据区，已初始区，声明全局变量的时候，同时给出了值， 那么这个变量就会放到已初始化。未初始化区：BSS,对于这个区的变量， 默认情况下， 全部初始为<span class="number">0</span>  
+2.数据区，已初始区，声明全局变量的时候，同时给出了值， 那么这个变量就会放到已初始化。未初始化区：BSS,对于这个区的变量， 默认情况下， 全部初始为0  
 
-<span class="number">3.</span>堆区:是程序员接触最多的区域。<span class="built_in">malloc</span>函数就是从这个区来分配内存的， 这个区是从下往上扩展
+3.堆区:是程序员接触最多的区域。malloc函数就是从这个区来分配内存的， 这个区是从下往上扩展
 
-<span class="number">4.</span>栈区：是由系统来管理的内存区域。局部变量，函数调用也在这个区，先进后出。
+4.栈区：是由系统来管理的内存区域。局部变量，函数调用也在这个区，先进后出。
 
-<span class="number">5.</span>命令参数及环境变量区
-</code></pre><h3 id="4-Ｃ语言中const_关键字的理解">4.Ｃ语言中const 关键字的理解</h3><h5 id="a-_对于非指针变量的修饰_比int_const关键字可以放到int_之前，_也可放到int之后，_如const_int_myInt;_int_const_myInt;它们所表达的含义是一样的，_都是表示myInt是一个常量。_不能修改myInt的值。_我们推荐使用const_int_myInt;">a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;</h5><h5 id="b-_对于指针变量的声明，_有四种情况_以int_*_为例">b. 对于指针变量的声明， 有四种情况 以int * 为例</h5><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">const</span> <span class="keyword">int</span> * pMyPointer </span><br><span class="line"><span class="number">2.</span> <span class="keyword">int</span> <span class="keyword">const</span> * pMyPointer </span><br><span class="line"><span class="number">3.</span> <span class="keyword">int</span> * <span class="keyword">const</span> pMyPointer; </span><br><span class="line"><span class="number">4.</span> <span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> pMyPointer</span><br></pre></td></tr></table></figure>
+5.命令参数及环境变量区
+</code></pre><h3 id="4-C语言中const-关键字的理解"><a href="#4-C语言中const-关键字的理解" class="headerlink" title="4.Ｃ语言中const 关键字的理解"></a>4.Ｃ语言中const 关键字的理解</h3><h5 id="a-对于非指针变量的修饰-比int-const关键字可以放到int-之前，-也可放到int之后，-如const-int-myInt-int-const-myInt-它们所表达的含义是一样的，-都是表示myInt是一个常量。-不能修改myInt的值。-我们推荐使用const-int-myInt"><a href="#a-对于非指针变量的修饰-比int-const关键字可以放到int-之前，-也可放到int之后，-如const-int-myInt-int-const-myInt-它们所表达的含义是一样的，-都是表示myInt是一个常量。-不能修改myInt的值。-我们推荐使用const-int-myInt" class="headerlink" title="a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;"></a>a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;</h5><h5 id="b-对于指针变量的声明，-有四种情况-以int-为例"><a href="#b-对于指针变量的声明，-有四种情况-以int-为例" class="headerlink" title="b. 对于指针变量的声明， 有四种情况 以int * 为例"></a>b. 对于指针变量的声明， 有四种情况 以int * 为例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. const int * pMyPointer </div><div class="line">2. int const * pMyPointer </div><div class="line">3. int * const pMyPointer; </div><div class="line">4. const int * const pMyPointer</div></pre></td></tr></table></figure>
 <p>对于1、2两种情况， 所表达的含义是一样的， 表示指针指指向的内容不能修改。</p>
 <p>对于第3种情况， 所表达的含义是说指针本身不能再指向其它地址</p>
 <p>对于第4种情况， 表明指针指向的内容不能修改， 同时指针本身也没能再指向其它地址。</p>
-<h3 id="在继承语法中，_关于OC的方法调度机制">在继承语法中， 关于OC的方法调度机制</h3><pre><code><span class="number">1</span>､每一个对象，都有一个指针指向其类
-<span class="number">2.</span>当向对象发送消息， 对象准备执行方法的时候，它会先在当前对象对属的类中查找这个方法， 如果找到话就开始执行， 如果没有找到的话， 就去对象所属类的父类去查找， 如果找到就执行， 如果没有找到， 则会沿着继承链一层一层的向上去查找， 直到<span class="built_in">NSObject</span> 类， 如果找到则执行， 如果没有找到， 则首先编译器会给出一个警告， 如果忽略了这个警告，则在运行时程序会崩溃。
-</code></pre><h3 id="在继承中，_子类对象是如何说父类声明的成员变量的？">在继承中， 子类对象是如何说父类声明的成员变量的？</h3><p>在创建一个新类的时候， 其对象会首先从父类中继承成员变量， 然后添加自身的成员变量。</p>
-<h3 id="谈谈你对OC中self_和_super的理解？">谈谈你对OC中self 和 super的理解？</h3><pre><code><span class="number">1</span>.<span class="keyword">self</span> 首先他是一个指针。
-<span class="number">2</span>.当向对象发送消息， 对象去调用对应的方法的时候， 在调用方法中， 在这个方法里，隐藏传了一个指针， 这个指针就是<span class="keyword">self</span>，这个<span class="keyword">self</span> 代表的是调用这个方法的消息接收者。
-<span class="number">3</span>. 有时候， 我们需要在子类里显式的调用父的方法， 这个时候 <span class="keyword">super</span>可以代表父类， 需要注意的是， 这个<span class="keyword">super</span>不是指针，也不是成员变量， 而它只是编译器识别的指令， 主要就用于子类访问父类的内容。
+<h3 id="在继承语法中，-关于OC的方法调度机制"><a href="#在继承语法中，-关于OC的方法调度机制" class="headerlink" title="在继承语法中， 关于OC的方法调度机制"></a>在继承语法中， 关于OC的方法调度机制</h3><pre><code>1､每一个对象，都有一个指针指向其类
+2.当向对象发送消息， 对象准备执行方法的时候，它会先在当前对象对属的类中查找这个方法， 如果找到话就开始执行， 如果没有找到的话， 就去对象所属类的父类去查找， 如果找到就执行， 如果没有找到， 则会沿着继承链一层一层的向上去查找， 直到NSObject 类， 如果找到则执行， 如果没有找到， 则首先编译器会给出一个警告， 如果忽略了这个警告，则在运行时程序会崩溃。
+</code></pre><h3 id="在继承中，-子类对象是如何说父类声明的成员变量的？"><a href="#在继承中，-子类对象是如何说父类声明的成员变量的？" class="headerlink" title="在继承中， 子类对象是如何说父类声明的成员变量的？"></a>在继承中， 子类对象是如何说父类声明的成员变量的？</h3><p>在创建一个新类的时候， 其对象会首先从父类中继承成员变量， 然后添加自身的成员变量。</p>
+<h3 id="谈谈你对OC中self-和-super的理解？"><a href="#谈谈你对OC中self-和-super的理解？" class="headerlink" title="谈谈你对OC中self 和 super的理解？"></a>谈谈你对OC中self 和 super的理解？</h3><pre><code>1.self 首先他是一个指针。
+2.当向对象发送消息， 对象去调用对应的方法的时候， 在调用方法中， 在这个方法里，隐藏传了一个指针， 这个指针就是self，这个self 代表的是调用这个方法的消息接收者。
+3. 有时候， 我们需要在子类里显式的调用父的方法， 这个时候 super可以代表父类， 需要注意的是， 这个super不是指针，也不是成员变量， 而它只是编译器识别的指令， 主要就用于子类访问父类的内容。
 </code></pre>
       
     </div>
@@ -286,20 +288,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/13/关于传值/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/04/19/test/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          关于传值用法
+          博客终于搞得像样了
         
       </div>
     </a>
   
-  
-    <a href="/2015/04/20/setUpBlog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">setUpBlog</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -326,7 +323,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="关于C" data-title="有关C的问题" data-url="http://yoursite.com/2015/07/13/关于C/"></div>
+	<div class="ds-thread" data-thread-key="关于C" data-title="有关C的问题" data-url="http://yoursite.com/2014/11/15/关于C/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -360,12 +357,12 @@
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/mobile.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/mobile.js"></script>
+<script src="/js/main.js"></script>
 
 
 
