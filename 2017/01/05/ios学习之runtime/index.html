@@ -3,14 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | 波澜海底心</title>
+  <title>波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="title:ios学习之runtime
+date:2017.1.6
+看到这篇对ios-runtime的讲解，http://www.imlifengfeng.com/blog/?cat=1 质量相当高
+我才有意识的找到NSObject,UIResponder基础类，然后打开#include &amp;lt;objc/objc.h&amp;gt;,#include &amp;lt;objc/NSObjCRuntime.h&amp;g">
+<meta property="og:type" content="article">
 <meta property="og:title" content="波澜海底心">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/01/05/ios学习之runtime/index.html">
 <meta property="og:site_name" content="波澜海底心">
+<meta property="og:description" content="title:ios学习之runtime
+date:2017.1.6
+看到这篇对ios-runtime的讲解，http://www.imlifengfeng.com/blog/?cat=1 质量相当高
+我才有意识的找到NSObject,UIResponder基础类，然后打开#include &amp;lt;objc/objc.h&amp;gt;,#include &amp;lt;objc/NSObjCRuntime.h&amp;g">
+<meta property="og:updated_time" content="2017-01-06T01:43:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="波澜海底心">
+<meta name="twitter:description" content="title:ios学习之runtime
+date:2017.1.6
+看到这篇对ios-runtime的讲解，http://www.imlifengfeng.com/blog/?cat=1 质量相当高
+我才有意识的找到NSObject,UIResponder基础类，然后打开#include &amp;lt;objc/objc.h&amp;gt;,#include &amp;lt;objc/NSObjCRuntime.h&amp;g">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -192,264 +205,90 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-ios学习之runtime" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/05/ios学习之runtime/" class="archive-article-date">
-  	<time datetime="2017-01-05T10:21:07.000Z" itemprop="datePublished">Jan 5</time>
+    <div class="article-meta">
+      <a href="/2017/01/05/ios学习之runtime/" class="article-date">
+  	<time datetime="2017-01-05T10:21:07.000Z" itemprop="datePublished">2017-01-05</time>
 </a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title:ios学习之runtime</p>
+<h2 id="date-2017-1-6"><a href="#date-2017-1-6" class="headerlink" title="date:2017.1.6"></a>date:2017.1.6</h2><ul>
+<li>看到这篇对ios-runtime的讲解，<a href="http://www.imlifengfeng.com/blog/?cat=1" target="_blank" rel="external">http://www.imlifengfeng.com/blog/?cat=1</a> 质量相当高</li>
+<li>我才有意识的找到<code>NSObject</code>,<code>UIResponder</code>基础类，然后打开<code>#include &lt;objc/objc.h&gt;</code>,<code>#include &lt;objc/NSObjCRuntime.h&gt;</code>源码,然后跟着文章的讲解开始去理解这些基础类。</li>
+<li>类似的开始学习这些系统的类和方法。</li>
+<li>之前的开发中，为了使app得性能更好，也尽可能的去运用系统的方法去实现，去掉繁琐的封装。对于封装，我们要取之有道。对于github上的大部分第三方，设计的理念也不尽相同，性能也就不确定。我们不要一味的简单运用，也要抽空去试着理解去改造，当然大部分开发者也会这么做，因为这些与我们的app不可能完美契合。最后等我们考虑到后期的优化性能上的提升时，需要我们自己去封装和重构。</li>
+<li>‘YYKit’等知名的SDK的对性能处理值得我们学习，搬砖这个词请我们尽可能的减少，为了自我的提高。</li>
+<li></li>
+<li>开源的知识讲解，案例很多。我想不出为什么还要分享自己不经验的见解，现在网上类似的答案也太多，也就没必要多余的分享。等到我足够有信心做好分享的时候我也会开源的。毕竟我的知识从开源从大家的分享中得到的！感谢！</li>
+</ul>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/05/谈我的学习工作之路/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈我的学习工作之路</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/05/谈我的学习工作之路/" class="archive-article-date">
-  	<time datetime="2017-01-05T07:43:42.000Z" itemprop="datePublished">Jan 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/05/谈我的学习工作之路/">谈谈我的学习工作之路</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/12/设计过的APP/" class="archive-article-date">
-  	<time datetime="2016-12-12T07:43:42.000Z" itemprop="datePublished">Dec 12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/12/设计过的APP/">设计过的app预览图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/20/总结的技术实用网站/" class="archive-article-date">
-  	<time datetime="2015-10-20T07:43:42.000Z" itemprop="datePublished">Oct 20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/20/总结的技术实用网站/">总结的技术实用网站</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/27/关于的git的学习/" class="archive-article-date">
-  	<time datetime="2015-05-27T13:04:58.000Z" itemprop="datePublished">May 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/27/关于的git的学习/">关于的git的学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/16/关于传值/" class="archive-article-date">
-  	<time datetime="2015-05-16T12:26:14.000Z" itemprop="datePublished">May 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/16/关于传值/">关于传值用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/19/test/" class="archive-article-date">
-  	<time datetime="2015-04-19T07:43:42.000Z" itemprop="datePublished">Apr 19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/19/test/">博客终于搞得像样了</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/11/15/关于C/" class="archive-article-date">
-  	<time datetime="2014-11-15T07:07:42.000Z" itemprop="datePublished">Nov 15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/11/15/关于C/">有关C的问题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ios学习之runtime" data-title="" data-url="http://yoursite.com/2017/01/05/ios学习之runtime/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
+
 </div>
       <footer id="footer">
   <div class="outer">
