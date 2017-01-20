@@ -317,6 +317,7 @@
 <li>也可以在AppDelegate里注册通知，针对网络边话得监测。还可以单独写一个工厂类，将网络获取的状态的方法和属性定义下来。<ul>
 <li><a href="http://www.jianshu.com/p/d429c912d2c1" target="_blank" rel="external">http://www.jianshu.com/p/d429c912d2c1</a></li>
 <li><a href="https://github.com/CharlinFeng/CoreStatus" target="_blank" rel="external">https://github.com/CharlinFeng/CoreStatus</a>（实时监测）</li>
+<li>AFNetworking提供的网络监测（好用）</li>
 </ul>
 </li>
 </ul>
@@ -517,7 +518,7 @@
 <li>那时候常常逛的论坛是 <a href="http://www.cocoachina.com/" target="_blank" rel="external">http://www.cocoachina.com/</a>，基本每天必刷。那时候我还没用翻墙，那时候掘金也刚对外注册开放了吧（之前是邀请注册对内），简书也刚火起来，<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>虽也常用，但没有真正用起来。那时候也刚好加入了干货大群，后来有了这个网站<a href="http://gank.io/" target="_blank" rel="external">http://gank.io/</a>。那时候刷各种代码demo，那时候还是个一个流程写下来自己都觉得乱七八糟的菜鸟。15年我挖了很多坑，也填了很多坑。</li>
 <li>很多第一次的尝试也是从那时候开始，那时候常常潜水认识了很多大大。那时候到现在APP已经写了六个了，一个人的ios开发是痛苦的，遇到问题很多也很难有别人的现场指导，都是从网上查原因自己去排查，感谢开源感谢别人的经验分享。然而这么久来我很少分享自己的心得，因为我觉得自己的经验和认知都不够，网上分享的那些（时效性）也要自己多次去验证。</li>
 <li>现在我依然是个菜鸟。接触的越多，自己的无知就越大。我不是计算机专业出身。数学（金融统计）学位，大学的知识也基本都忘了。我不曾买过C++的书，对基础的理解也是反复从现有代码的穿插理解和别人的案例讲解来认识。现在对于那些常用的<code>AFNetworking</code>,<code>Mantle</code>的理解还是不堪,也没用到<code>#import &lt;objc/runtime.h&gt;</code>这种系统API。不得不说OC是封装的较易理解和运用的语言。学习时间短，基于大量的开放的SDK大家可以快速的进行开发。这也是整个行业码农数量的大量涌入原因之一吧，16这一年的行情真够差的。</li>
-<li>码农（搬砖）-&gt;程序员（匠心）-&gt;工程师（前瞻） 这是我对代码行业的认识。我现在还是在码农这一阶段。</li>
+<li>码农（搬砖）-&gt;程序员（匠心）-&gt;工程师（前瞻） 这是我对代码行业的认识。</li>
 <li>16年这一年除了写了公司的app，还接了外包。熟练了OC语言和开发流程，清晰了代码结构，重写和优化了代码逻辑。并对swift2、3的简单尝试和运用。剩下更多的时间则用来学习<code>react-native</code>，这个是受群里的<code>poberwong</code>的影响，也是对热更新的好奇。</li>
 <li>开始了对<code>hybird</code>,<code>native</code>,<code>webApp</code>等的大概了解，对<code>JavaScript</code>的兴趣也更多些。<a href="http://www.runoob.com/" target="_blank" rel="external">http://www.runoob.com/</a>菜鸟教程对基础的学习还是很好用的，顺便也得了解<code>HTML/CSS</code>、<code>Node</code>等。插曲是对这些东西的文档都简单了解。好像花了一两个月时间去看相关的书籍。试着搭相关的环境，把公司的电脑整的还挺乱的，系统根目录上安装的路径还是挺乱的，以至于之后插件等版本升级造成了不小的坑。爬虫：对数据的抓取python,node的兴趣有待研究。也试过用wireshark进行数据抓取</li>
 <li>rn的正式尝试，安装了<code>SublimeText</code>、<code>Atom</code>、<code>VisualStudioCode</code>、<code>WebStorm</code>,编辑器的选择根据插件，还是对语言环境的不熟悉需要依赖插件然后就选择后两个顺手的。基于xcode模拟器的run-ios可以正常的测试demo，安卓版本上现在配置上还是有些问题有待解决，不过现在在ios上的尝试已经算是入门了吧。对基础控件和语法也渐渐适应阶段，也已经模仿尝试了几个demo。</li>
@@ -573,15 +574,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####校企桥 </p>
-<p>#####oc版<br><a href="https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5oc.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5oc.gif</a></p>
-<p>#######swift版<br><a href="https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5swift.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5swift.gif</a></p>
-<p>#####51钱途<br><a href="https://github.com/judahxu/APPImage/blob/master/51%E9%92%B1%E9%80%94.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/51%E9%92%B1%E9%80%94.gif</a></p>
-<p>#####深圳标准<br><a href="https://github.com/judahxu/APPImage/blob/master/%E6%B7%B1%E5%9C%B3%E6%A0%87%E5%87%86.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%B7%B1%E5%9C%B3%E6%A0%87%E5%87%86.gif</a></p>
-<p>#####聘聘企业端<br><a href="https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E4%BC%81%E4%B8%9A%E7%AB%AF.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E4%BC%81%E4%B8%9A%E7%AB%AF.gif</a></p>
-<p>#####聘聘学生端<br><a href="https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E5%AD%A6%E7%94%9F%E7%AB%AF.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E5%AD%A6%E7%94%9F%E7%AB%AF.gif</a></p>
-<p>#####车投宝<br><a href="https://github.com/judahxu/APPImage/blob/master/%E8%BD%A6%E6%8A%95%E5%AE%9D.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%BD%A6%E6%8A%95%E5%AE%9D.gif</a></p>
-<p>#####目录<br><img src="https://github.com/judahxu/APPImage/blob/master/swift.png" alt="Aaron Swartz"></p>
+        <p>个人项目：</p>
+<ul>
+<li><p>校企桥（从1.0开始维护，到2.0、3.0的大改版） </p>
+<ul>
+<li>oc版 （功能量大，代码结构冗杂，后来没有怎么维护了）<br><a href="https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5oc.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5oc.gif</a></li>
+<li>swift版 （练手swift,部分主要界面和功能的实现）<br><a href="https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5swift.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%A0%A1%E4%BC%81%E6%A1%A5swift.gif</a><ul>
+<li>AppStore下载地址 <a href="https://itunes.apple.com/us/app/xiao-qi-qiao/id932471670?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="external">https://itunes.apple.com/us/app/xiao-qi-qiao/id932471670?l=zh&amp;ls=1&amp;mt=8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>51钱途</p>
+<ul>
+<li><a href="https://github.com/judahxu/APPImage/blob/master/51%E9%92%B1%E9%80%94.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/51%E9%92%B1%E9%80%94.gif</a></li>
+<li>AppStore下载地址 <a href="https://itunes.apple.com/us/app/51qian-tu/id1106751956?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="external">https://itunes.apple.com/us/app/51qian-tu/id1106751956?l=zh&amp;ls=1&amp;mt=8</a></li>
+</ul>
+</li>
+<li><p>深圳标准 （外包，政府项目，企业开发者账号）</p>
+<ul>
+<li><a href="https://github.com/judahxu/APPImage/blob/master/%E6%B7%B1%E5%9C%B3%E6%A0%87%E5%87%86.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E6%B7%B1%E5%9C%B3%E6%A0%87%E5%87%86.gif</a></li>
+</ul>
+</li>
+<li><p>校企聘聘企业端 </p>
+<ul>
+<li><a href="https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E4%BC%81%E4%B8%9A%E7%AB%AF.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E4%BC%81%E4%B8%9A%E7%AB%AF.gif</a></li>
+<li>AppStore下载地址 <a href="https://itunes.apple.com/us/app/xiao-qi-pin-pin-qi-ye-duan/id1169292737?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="external">https://itunes.apple.com/us/app/xiao-qi-pin-pin-qi-ye-duan/id1169292737?l=zh&amp;ls=1&amp;mt=8</a></li>
+</ul>
+</li>
+<li><p>校企聘聘（学生端） </p>
+<ul>
+<li><a href="https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E5%AD%A6%E7%94%9F%E7%AB%AF.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%81%98%E8%81%98%E5%AD%A6%E7%94%9F%E7%AB%AF.gif</a></li>
+<li>AppStore下载地址 <a href="https://itunes.apple.com/us/app/xiao-qi-pin-pin/id1169291491?l=zh&amp;ls=1&amp;mt=8" target="_blank" rel="external">https://itunes.apple.com/us/app/xiao-qi-pin-pin/id1169291491?l=zh&amp;ls=1&amp;mt=8</a></li>
+</ul>
+</li>
+</ul>
+<p>基于这些，校企桥成立第三年成功A轮融资</p>
+<ul>
+<li><p>车投宝 （本地数据）<br><a href="https://github.com/judahxu/APPImage/blob/master/%E8%BD%A6%E6%8A%95%E5%AE%9D.gif" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/%E8%BD%A6%E6%8A%95%E5%AE%9D.gif</a></p>
+</li>
+<li><p>目录<br><a href="https://github.com/judahxu/APPImage/blob/master/swift.png" target="_blank" rel="external">https://github.com/judahxu/APPImage/blob/master/swift.png</a></p>
+</li>
+</ul>
 
       
     </div>
@@ -630,263 +664,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#####常用的工具<br>    MOU记事本  HttpSoop网络抓取数据  SQLPro数据库<br><a href="http://www.atool.org/站长工具" target="_blank" rel="external">http://www.atool.org/站长工具</a><br><a href="https://www.gitignore.io/" target="_blank" rel="external">https://www.gitignore.io/</a> 脚本语言<br><a href="http://www.runoob.com/tool/json/index.html" target="_blank" rel="external">http://www.runoob.com/tool/json/index.html</a> json格式转化工具</p>
-<h5 id="好用的网址"><a href="#好用的网址" class="headerlink" title="好用的网址"></a>好用的网址</h5><p><a href="http://www.macapp.so/" target="_blank" rel="external">http://www.macapp.so/</a> 免费软件   <a href="http://soft.macx.cn/" target="_blank" rel="external">http://soft.macx.cn/</a></p>
-<p><a href="http://www.iconpng.com/" target="_blank" rel="external">http://www.iconpng.com/</a> UI图标搜素引擎</p>
-<p><a href="http://www.flvurl.cn/Default.aspx" target="_blank" rel="external">http://www.flvurl.cn/Default.aspx</a> 视频解析（各种类型的码）</p>
-<p><a href="http://so.chongbuluo.com/" target="_blank" rel="external">http://so.chongbuluo.com/</a> 各种搜索引擎</p>
-<p><a href="http://unbug.github.io/codelf/" target="_blank" rel="external">http://unbug.github.io/codelf/</a> 各代码语言搜索</p>
-<h5 id="git库"><a href="#git库" class="headerlink" title="git库"></a>git库</h5><p><a href="http://www.henishuo.com/" target="_blank" rel="external">http://www.henishuo.com/</a> 标哥的技术博客</p>
-<p><a href="http://www.52codes.net/article/465.html" target="_blank" rel="external">http://www.52codes.net/article/465.html</a> ios资源</p>
-<p><a href="http://www.zhihu.com/question/28518265?rf=28477097" target="_blank" rel="external">http://www.zhihu.com/question/28518265?rf=28477097</a> 知乎整理的ios app源码</p>
-<p><a href="https://github.com/dkhamsing/open-source-ios-apps" target="_blank" rel="external">https://github.com/dkhamsing/open-source-ios-apps</a>  Open-Source iOS Apps   </p>
-<p><a href="https://github.com/everettjf/TomatoRead" target="_blank" rel="external">https://github.com/everettjf/TomatoRead</a> 专注于精选 iOS/OS X 开发者博客   </p>
-<p><a href="http://www.coderbar.cn/forum-2-1.html" target="_blank" rel="external">http://www.coderbar.cn/forum-2-1.html</a> ios书籍下载</p>
-<p><a href="https://github.com/mahong125/iOS_Resource_Summary" target="_blank" rel="external">https://github.com/mahong125/iOS_Resource_Summary</a>  关于iOS学习方面的素材</p>
-<p><a href="https://github.com/Tim9Liu9/TimLiu-iOS" target="_blank" rel="external">https://github.com/Tim9Liu9/TimLiu-iOS</a> 各种资源库 </p>
-<p><a href="https://github.com/CharlinFeng/Show" target="_blank" rel="external">https://github.com/CharlinFeng/Show</a> 资源库</p>
-<p><a href="http://qiannao.com/ls/zhaoguyilang/61911f16/" target="_blank" rel="external">http://qiannao.com/ls/zhaoguyilang/61911f16/</a>  书籍资料</p>
-<p><a href="http://github.ibireme.com/github/list/ios/" target="_blank" rel="external">http://github.ibireme.com/github/list/ios/</a>  github实用库  </p>
-<p><a href="https://github.com/nemoTyrant/manong" target="_blank" rel="external">https://github.com/nemoTyrant/manong</a> github书籍资料</p>
-<p><a href="http://docs.oracle.com/cd/E15586_01/nav/portal_booklist.htm书籍资料" target="_blank" rel="external">http://docs.oracle.com/cd/E15586_01/nav/portal_booklist.htm书籍资料</a></p>
-<p><a href="http://www.cocoachina.com/special/design/设计学习" target="_blank" rel="external">http://www.cocoachina.com/special/design/设计学习</a></p>
-<p><a href="http://www.cocoachina.com/special/appdesign/设计灵感" target="_blank" rel="external">http://www.cocoachina.com/special/appdesign/设计灵感</a></p>
-<p><a href="http://www.cocoachina.com/swift/20150921/13452.html" target="_blank" rel="external">http://www.cocoachina.com/swift/20150921/13452.html</a> swift学习<br><a href="http://iswift.org/?utm_source=next.36kr.com" target="_blank" rel="external">http://iswift.org/?utm_source=next.36kr.com</a> 代码转换swift</p>
-<p><a href="http://www.cocoachina.com/design/20150921/13262.html“触动人心的设计”方法初步探究" target="_blank" rel="external">http://www.cocoachina.com/design/20150921/13262.html“触动人心的设计”方法初步探究</a></p>
-<p><a href="http://www.cnblogs.com/kenshincui/p/3972100.html" target="_blank" rel="external">http://www.cnblogs.com/kenshincui/p/3972100.html</a> 基础动画学习</p>
-<p><a href="http://www.sololi.net/archives/464" target="_blank" rel="external">http://www.sololi.net/archives/464</a> 李龙的博客</p>
-<p><a href="http://casatwy.com/" target="_blank" rel="external">http://casatwy.com/</a> iOS架构理解</p>
-<p><a href="http://www.starming.com/index.php?v=index&amp;view=84" target="_blank" rel="external">http://www.starming.com/index.php?v=index&amp;view=84</a> 详解布局</p>
-<p><a href="http://blog.ibireme.com/archive/" target="_blank" rel="external">http://blog.ibireme.com/archive/</a> YY大神的讲解</p>
-<p><a href="http://swift.gg/" target="_blank" rel="external">http://swift.gg/</a> 新手swift //半塘</p>
-<p><a href="http://mrpeak.cn/" target="_blank" rel="external">http://mrpeak.cn/</a> MrPeak技术分享</p>
-<p><a href="http://finalshares.com/read-6892即分享" target="_blank" rel="external">http://finalshares.com/read-6892即分享</a> 热修复JSPatch</p>
-<p><a href="https://segmentfault.com/bookmark/1230000004250380" target="_blank" rel="external">https://segmentfault.com/bookmark/1230000004250380</a> ios论坛</p>
-<p><a href="http://www.tuicool.com/articles/zaInUbA" target="_blank" rel="external">http://www.tuicool.com/articles/zaInUbA</a>  学习React-Native<br><a href="http://www.1ke.co/course/269" target="_blank" rel="external">http://www.1ke.co/course/269</a>   </p>
-<p><a href="http://bang590.github.io/JSPatchConvertor/" target="_blank" rel="external">http://bang590.github.io/JSPatchConvertor/</a> 转换JSPatch</p>
-<p><a href="https://github.com/wujunyang/MobileProject" target="_blank" rel="external">https://github.com/wujunyang/MobileProject</a> MVC框架</p>
-<p><a href="https://github.com/shaojiankui/iOS-Categories" target="_blank" rel="external">https://github.com/shaojiankui/iOS-Categories</a> 类别</p>
-<p><a href="http://wereadteam.github.io/" target="_blank" rel="external">http://wereadteam.github.io/</a> 架构</p>
-<p><a href="http://www.wtoutiao.com/p/1d46418.html" target="_blank" rel="external">http://www.wtoutiao.com/p/1d46418.html</a> 算法</p>
-<p><a href="http://www.2cto.com/kf/201505/401059.html" target="_blank" rel="external">http://www.2cto.com/kf/201505/401059.html</a> 内存性能优化</p>
-<p>#####指令<br>    $ pod install –verbose –no-repo-update  //update</p>
-<pre><code>$(SRCROOT)   $(PROJECT_DIR)自动搜索路径  $(inherited)
+        <p>这篇重新整理。。。</p>
 
-$ 添加类库 Security.framework、MobileCoreServices.framework、SystemConfiguration.framework
-AFNetWorking使用了ARC ，在不使用ARC项目中使用时，对AFNetWorking的所有.m文件添加“-fobjc-arc” 
-在使用ARC项目中，使用“不使用ARC”的类库时，对类库的.m文件添加“-fno-objc-arc”
-
-$ #define Color(r, g, b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f]   颜色
-
-$sudo pmset -a standby 0 sleep 20 hibernatemode 3 networkoversleep 0 force Mac不允许睡眠    
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-关于的git的学习" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/27/关于的git的学习/" class="article-date">
-  	<time datetime="2015-05-27T13:04:58.000Z" itemprop="datePublished">2015-05-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/27/关于的git的学习/">关于的git的学习</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>流程：<a href="http://www.open-open.com/news/view/b7227e" target="_blank" rel="external">http://www.open-open.com/news/view/b7227e</a></p>
-<p>######Git 常用命令</p>
-<pre><code>git init here            
--- 创建本地仓库(repository)，将会在文件夹下创建一个 .git 文件夹，.git 文件夹里存储了所有的版本信息、标记等内容
-
-git remote add origin git@github.com:winter1991/helloworld.git        
--- 把本地仓库和远程仓库关联起来。如果不执行这个命令的话，每次 push 的时候都需要指定远程服务器的地址
-
-git add                  
--- 从本地仓库增删，结果将会保存到本机的缓存里面
-git rm
-
-git commit -m &quot;注释&quot;     
--- 提交，把本机缓存中的内容提交到本机的 HEAD 里面
-
-git push origin master   
--- 把本地的 commit(提交) push 到远程服务器上， origin 也就是之前 git remote add origin 那个命令里面的 origin，origin 替代了服务器仓库地址：git push git@github.com:winter1991/helloworld.git master
-
-git pull origin master   
--- 从远程服务器 pull 新的改动
-
-git status               -- 查看状态
-git add -A               -- 提交全部修改
-</code></pre><p>######1) 远程仓库相关命令<br>    检出仓库：$ git clone git://github.com/jquery/jquery.git<br>    查看远程仓库：$ git remote -v<br>    添加远程仓库：$ git remote add [name] [url]<br>    删除远程仓库：$ git remote rm [name]<br>    拉取远程仓库：$ git pull [remoteName][localBranchName]<br>    推送远程仓库：$ git push [remoteName][localBranchName]</p>
-<p>######2）分支(branch)操作相关命令<br>    查看本地分支：$ git branch<br>    查看远程分支：$ git branch -r<br>    创建本地分支：$ git branch [name]<br>    ——注意新分支创建后不会自动切换为当前分支<br>    切换分支：$ git checkout [name]<br>    创建新分支并立即切换到新分支：$ git checkout -b [name]<br>    删除分支：$ git branch -d [name]<br>    —— -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无  法删除的。如果想强制删除一个分支，可以使用-D选项<br>    合并分支：$ git merge [name]<br>    ——将名称为[name]的分支与当前分支合并<br>    创建远程分支(本地分支push到远程)：$ git push origin [name]<br>    删除远程分支：$ git push origin :heads/[name]</p>
-<p>######1. git 配置：<br>    git config –global user.name “xxx”<br>    – 配置用户名，上传本地 repository 到服务器上的时候，在 Github 上会显示这里配置的上传者信息<br>    git config –global user.email “xxx”<br>     – 配置邮箱<br>    git config –list<br>    查看配置列表</p>
-<p>######配置 sshkey ： 上传代码时使用这个 sshkey 来确认是否有上传权限</p>
-<pre><code>1. 创建本地 ssh ： ssh-keygen -t rsa -C &quot;Github 的注册邮箱&quot;
-2. 在 Github 中添加这个 sshkey ： 
-    复制  C:\Documents and Settings\Administrator\.ssh\id_rsa.pub 文件中的内容；
-    登录 Github --&gt; Account Setting  --&gt; SSH-KEY --&gt; Add SSH-KEY --&gt; 粘贴id_rsa.pub中的内容；
-3. 验证： ssh -T git@github.com
-    出现 Hi xxx! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 说明配置成功，可以连接上 Github
-</code></pre><ol>
-<li><p>建立仓库 repository ：</p>
-<pre><code>git init here       创建本地仓库
-git remote add origin git@github.com:用户名/仓库名.git
-把本地仓库和远程仓库关联起来， 如果不执行这个命令的话，每次 push 的时候都需要指定远程服务器的地址
-</code></pre></li>
-</ol>
-<ol>
-<li><p>从远程仓库中下载新的改动：</p>
-<pre><code>git pull origin master
-$ git fetch origin    取得远程更新，这里可以看做是准备要取了
-$ git merge origin/master  把更新的内容合并到本地分支/master
-</code></pre></li>
-</ol>
-<ol>
-<li><p>提交本地修改到远程仓库中：</p>
-<pre><code>git add
-git add -A       将改动添加到本地仓库中
-git rm xxx       从本地仓库中删除指定文件
-git rm -r xxx    从本地仓库中删除指定文件夹
-
-git commit -m &quot;注释&quot;     把本机缓存中的内容提交到本机的 HEAD 里面
-$ git remote -v  查看你当前项目远程连接的是哪个仓库地址。
-git push origin master       把本地的 commit push 到远程仓库中
-</code></pre></li>
-</ol>
-<ol>
-<li><p>使用 .gitignore 文件忽略指定的内容：</p>
-<pre><code>1. 在本地仓库根目录创建 .gitignore 文件。Win7 下不能直接创建，可以创建 &quot;.gitignore.&quot; 文件，后面的标点自动被忽略；
-2. 过滤文件和文件夹： [Tt]emp/ 过滤 Temp\temp 文件夹； *.suo 过滤 .suo 文件；
-3. 不过滤文件和文件夹： !*.c
-</code></pre></li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-关于传值" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/16/关于传值/" class="article-date">
-  	<time datetime="2015-05-16T12:26:14.000Z" itemprop="datePublished">2015-05-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/16/关于传值/">关于传值用法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>####什么是KVC —&gt;What<br>KVC指的就是NSKeyValueCoding非正式协议。 KVC是一种间接地访问对象的属性的机制。<br>这种间接表现在通过字符串来标识属性,而不是通过调用存取方法或直接地访问实例变量的方式。<br>KVC机制不仅支持对象,还支持标量和结构体类型,这些非对象的类型会被自动的装箱和开箱。    </p>
-<p>####Key &amp; Key Path<br>键(Key)是一个字符串用来标识对象里面的一个指定的属性。一般一个键对应对象的存取方法或 实例变量。键必须是ASCII码,一般以小写字母开始,不能包含空格。<br>A key path is a string of dot separated keys that is used to specify a sequence of object properties to traverse. The property of the first key in the sequence is relative to the receiver, and each subsequent key is evaluated relative to the value of the previous property.<br>键路径(Key Path)是一个由点进行分割的一系列键组成的字符串 KVC的使用</p>
-<p>####如何使用KVC</p>
-<p>KVC常用于MVC中Model与Controller之间的通信。 </p>
-<pre><code>￼￼- (void)setValue:(id)value forKey:(NSString *)key        
-- (id)valueForKey:(NSString *)key      
-- (void)setNilValueForKey:(NSString *)key                 - (void)setValue:(id)value forKeyPath:(NSString  *)keyPath
-￼- (id)valueForKeyPath:(NSString *)keyPath                  - (id)valueForUndefinedKey:(NSString *)key      
-</code></pre><p>￼￼￼￼</p>
-<p>KVC与点语法是正交的,也就是一点关系都没有<br>The accessor patterns are written in the form -set<key>: or -<key>     </key></key></p>
-<p>####什么是KVO</p>
-<p>键值观察(Key-value observing)是一种机制。这种机制允许当一个对象的某些属性的值被修改 后会通知另外观察该变化的对象。       </p>
-<p>####￼如何使用KVO</p>
-<pre><code>- (void)addObserver:(NSObject *)anObserver forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context                                                     - (void)removeObserver:(NSObject *)anObserver forKeyPath:(NSString *)keyPath                           - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-</code></pre><p>####利用通知中心传值(NSNotificationCenter)</p>
-<p>1.接受传过来的值       </p>
-<pre><code> [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(demo:) name:@&quot;hello&quot; object:@&quot;hello&quot;];            
-- (void)demo:(NSNotification *)noti      
-{     
-NSLog(@&quot;%@&quot;,noti.userInfo[@&quot;hello&quot;]);      
-}  
-</code></pre><p>2.发送通知并传值(利用字典可以传多个值)</p>
-<pre><code>NSString *str = @&quot;one&quot;;      
-NSDictionary *dic = @{@&quot;hello&quot;: str};      
-[[NSNotificationCenter defaultCenter]    postNotificationName:@&quot;hello&quot; object:@&quot;hello&quot; userInfo:dic];      
-</code></pre><p>￼￼￼￼￼<br>附：注册键盘升启关闭消息  </p>
-<pre><code>//键盘升起             
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-//键盘降下         
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-</code></pre><p>####用 storyBoard 在界面之间传值</p>
-<pre><code>- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender     
-{      
-UITableViewCell *cell = (UITableViewCell *)sender;     
-NSIndexPath *indexPath =  [self.tableView indexPathForCell:cell];      
-id model = _students[indexPath.row];      
-//组装模型        
-NSString *name = [model valueForKey:kName];   
-NSString *ID = [model valueForKey:kStuID];    
-int age = [[model valueForKey:kAge] intValue];    
-
-QYStudentModel *student = [QYStudentModel studentWithName:name ID:ID andAge:age];    
-UIViewController *dstVC = segue.destinationViewController;      
-[dstVC setValue:student forKey:@&quot;student&quot;];    
- } 
-</code></pre>
       
     </div>
     
@@ -1000,10 +779,140 @@ $ hexo d
 
 
   
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+    <div class="article-meta">
+      <a href="/2015/04/19/test/" class="article-date">
+  	<time datetime="2015-04-19T07:43:42.000Z" itemprop="datePublished">2015-04-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/19/test/">博客终于搞得像样了</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每天学习一点点..错误一点点，正确一点点，加油！木有什么难的！<br>现在是模仿阶段，在复制中摸索。。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-关于C" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/15/关于C/" class="article-date">
+  	<time datetime="2014-11-15T07:07:42.000Z" itemprop="datePublished">2014-11-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/15/关于C/">有关C的问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）"><a href="#1-程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）" class="headerlink" title="1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?"></a>1. 程序源代码以C语言为例，是如何转换为可执行的代码（二进制代码或者说机器语言）?</h3><p>C源代码 －&gt; 预处理器 －&gt; 编译器 －&gt; 汇编器 -&gt; 链接器 -&gt; 转换为可执行的文件</p>
+<pre><code>1. C源代码经过预处理器其结果，还是C语言
+
+2. 预处理器经过编译（句法，词义分析，代码的优化，代码生成），其结果是汇编代码
+
+3. 汇编代码结过汇编器其结果是中间代码（.o），其本质上也是二进制代码
+
+4. 中间文件（.o）经过链接器的链接， 最后生成可执行的文件。
+</code></pre><h3 id="2-C语言里比较灵活的一块内容是指针，-那么请谈谈你对指针的理解。"><a href="#2-C语言里比较灵活的一块内容是指针，-那么请谈谈你对指针的理解。" class="headerlink" title="2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。"></a>2.Ｃ语言里比较灵活的一块内容是指针， 那么请谈谈你对指针的理解。</h3><pre><code>回答这个问题的思路：
+1､什么是指针，指针的基本概念
+2.指针的使用场景
+3.结合具体的例子，来说明一个， 用指针来解决那些问题。
+4.关于指针运算的问题。
+</code></pre><h3 id="3-C语言内存布局"><a href="#3-C语言内存布局" class="headerlink" title="3.Ｃ语言内存布局"></a>3.Ｃ语言内存布局</h3><p><img src="/Users/qingyun/Desktop/1411Student/文档/C程序内存布局示意图.png" alt="Mou icon"> </p>
+<pre><code>1.代码区：主要是存放代码，也就是程序指令。这个区的数据是只读
+
+2.数据区，已初始区，声明全局变量的时候，同时给出了值， 那么这个变量就会放到已初始化。未初始化区：BSS,对于这个区的变量， 默认情况下， 全部初始为0  
+
+3.堆区:是程序员接触最多的区域。malloc函数就是从这个区来分配内存的， 这个区是从下往上扩展
+
+4.栈区：是由系统来管理的内存区域。局部变量，函数调用也在这个区，先进后出。
+
+5.命令参数及环境变量区
+</code></pre><h3 id="4-C语言中const-关键字的理解"><a href="#4-C语言中const-关键字的理解" class="headerlink" title="4.Ｃ语言中const 关键字的理解"></a>4.Ｃ语言中const 关键字的理解</h3><h5 id="a-对于非指针变量的修饰-比int-const关键字可以放到int-之前，-也可放到int之后，-如const-int-myInt-int-const-myInt-它们所表达的含义是一样的，-都是表示myInt是一个常量。-不能修改myInt的值。-我们推荐使用const-int-myInt"><a href="#a-对于非指针变量的修饰-比int-const关键字可以放到int-之前，-也可放到int之后，-如const-int-myInt-int-const-myInt-它们所表达的含义是一样的，-都是表示myInt是一个常量。-不能修改myInt的值。-我们推荐使用const-int-myInt" class="headerlink" title="a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;"></a>a. 对于非指针变量的修饰 比int const关键字可以放到int 之前， 也可放到int之后， 如const int myInt; int const myInt;它们所表达的含义是一样的， 都是表示myInt是一个常量。 不能修改myInt的值。 我们推荐使用const int myInt;</h5><h5 id="b-对于指针变量的声明，-有四种情况-以int-为例"><a href="#b-对于指针变量的声明，-有四种情况-以int-为例" class="headerlink" title="b. 对于指针变量的声明， 有四种情况 以int * 为例"></a>b. 对于指针变量的声明， 有四种情况 以int * 为例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. const int * pMyPointer </div><div class="line">2. int const * pMyPointer </div><div class="line">3. int * const pMyPointer; </div><div class="line">4. const int * const pMyPointer</div></pre></td></tr></table></figure>
+<p>对于1、2两种情况， 所表达的含义是一样的， 表示指针指指向的内容不能修改。</p>
+<p>对于第3种情况， 所表达的含义是说指针本身不能再指向其它地址</p>
+<p>对于第4种情况， 表明指针指向的内容不能修改， 同时指针本身也没能再指向其它地址。</p>
+<h3 id="在继承语法中，-关于OC的方法调度机制"><a href="#在继承语法中，-关于OC的方法调度机制" class="headerlink" title="在继承语法中， 关于OC的方法调度机制"></a>在继承语法中， 关于OC的方法调度机制</h3><pre><code>1､每一个对象，都有一个指针指向其类
+2.当向对象发送消息， 对象准备执行方法的时候，它会先在当前对象对属的类中查找这个方法， 如果找到话就开始执行， 如果没有找到的话， 就去对象所属类的父类去查找， 如果找到就执行， 如果没有找到， 则会沿着继承链一层一层的向上去查找， 直到NSObject 类， 如果找到则执行， 如果没有找到， 则首先编译器会给出一个警告， 如果忽略了这个警告，则在运行时程序会崩溃。
+</code></pre><h3 id="在继承中，-子类对象是如何说父类声明的成员变量的？"><a href="#在继承中，-子类对象是如何说父类声明的成员变量的？" class="headerlink" title="在继承中， 子类对象是如何说父类声明的成员变量的？"></a>在继承中， 子类对象是如何说父类声明的成员变量的？</h3><p>在创建一个新类的时候， 其对象会首先从父类中继承成员变量， 然后添加自身的成员变量。</p>
+<h3 id="谈谈你对OC中self-和-super的理解？"><a href="#谈谈你对OC中self-和-super的理解？" class="headerlink" title="谈谈你对OC中self 和 super的理解？"></a>谈谈你对OC中self 和 super的理解？</h3><pre><code>1.self 首先他是一个指针。
+2.当向对象发送消息， 对象去调用对应的方法的时候， 在调用方法中， 在这个方法里，隐藏传了一个指针， 这个指针就是self，这个self 代表的是调用这个方法的消息接收者。
+3. 有时候， 我们需要在子类里显式的调用父的方法， 这个时候 super可以代表父类， 需要注意的是， 这个super不是指针，也不是成员变量， 而它只是编译器识别的指令， 主要就用于子类访问父类的内容。
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
   
 </div>
       <footer id="footer">
