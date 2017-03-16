@@ -188,6 +188,55 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-3·15晚会" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/16/3·15晚会/" class="article-date">
+  	<time datetime="2017-03-16T07:43:42.000Z" itemprop="datePublished">2017-03-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/16/3·15晚会/">3·15晚会</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每一年的315晚会都揭露一些代表性消费欺诈现象，引起大家的广泛关注。当然这些只是小部分，还有很多曾上热搜的相关消费问题。<br>一年一提醒，可是消费欺诈手段也在升级，上当受骗依旧。大家的关注热情并没有持久力，毕竟亲身遇到的次数少，但受骗人群量大。<br>关于曝光的后续问题不知道有多少人继续深究下去。<br>跟朋友讨论的时候，昨天刚好315工商举报的小程序上线，那么是不是也该上线一个，展示每年315事件以及曾上热搜的问题事件，消费曝光的后续解决，还可以罗列一些消费遇到的问题排行，让曾受到坑害的人发表点赞参与。给予大家一种提示警醒。<br>3·15 这么叼 为啥没有一个相关平台陈列一下 重要信息呢 好神奇！<br>可以考虑自己做一个公益性的宣传</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-整理后感" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1040,98 +1089,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这篇重新整理。。。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-setUpBlog" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/04/20/setUpBlog/" class="article-date">
-  	<time datetime="2015-04-20T07:43:42.000Z" itemprop="datePublished">2015-04-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/20/setUpBlog/">setUpBlog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#####安装brew<br>执行命令</p>
-<pre><code>1$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre><p>######安装wget<br>执行命令</p>
-<pre><code>$ brew install wget
-</code></pre><p>######安装nvm(node.js的版本管理工具)</p>
-<pre><code>$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-</code></pre><p>######添加如下内容到~/.zshrc 配置文件</p>
-<pre><code>[ -s &quot;/Users/`users`/.nvm/nvm.sh&quot; ] &amp;&amp; . &quot;/Users/`users`/.nvm/nvm.sh&quot; # This loads nvm
-</code></pre><p>######安装node.js(通过nvm安装)</p>
-<pre><code>$ nvm install 0.10
-</code></pre><p>######安装hexo</p>
-<pre><code>$ npm install -g hexo
-</code></pre><p>######创建hexo文件夹，并安装hexo组件</p>
-<pre><code>$ hexo init hexo
-$ cd hexo
-$ npm install
-</code></pre><p>######查看本地<br>输⼊入如下命令后,打开浏览器,并输⼊入localhost:4000来查看</p>
-<pre><code>$ hexo g
-$ hexo s
-</code></pre><p>######登录github.com注册github账号</p>
-<p>创建与github同名的repository</p>
-<p>eg : github账号名位lfxfengxia,则创建lfxfengxia.github.io</p>
-<p>######部署到github上</p>
-<p>如下所示编辑_config.yml</p>
-<pre><code>deploy: 
-type: github
-repository: git@github.com:dorayox/dorayox.github.io.git
-branch: master
-</code></pre><p>输入如下命令，完成到github的部署，之后打开浏览器并输入judagxu.github.io来查看</p>
-<pre><code>$ hexo g
-$ hexo d
-</code></pre><p>######上传文件到blog</p>
-<p>在hexo目录下，创建新文件</p>
-<p>eg : 创建新文件test</p>
-<pre><code>$ hexo new test
-</code></pre><p>默认创建的新文件后缀问 .md文件，存在hexo/source/_posts/目录下</p>
-<p>使用MOU打开新建的文件并完成编辑</p>
-<pre><code>$ mou source/_posts/test.md
-</code></pre><p>将新建的文件声称网页</p>
-<pre><code>$ hexo g
-</code></pre><p>上传到blog</p>
-<pre><code>$ hexo d
-</code></pre><p>登录blog查看是否上传成功</p>
-<p><a href="http://judahxu.github.io" target="_blank" rel="external">http://judahxu.github.io</a></p>
 
       
     </div>
