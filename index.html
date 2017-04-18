@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
+						<a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
 					</div>
 				</section>
 				
@@ -188,6 +188,64 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ios之逆向尝试" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/01/ios之逆向尝试/" class="article-date">
+  	<time datetime="2017-03-31T16:00:00.000Z" itemprop="datePublished">2017-04-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/01/ios之逆向尝试/">ios之逆向尝试</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
+<p><a href="https://github.com/Urinx/iOSAppHook" target="_blank" rel="external">iOSAppHook</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* class-dump -H Kuaikan.app</div><div class="line">* otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* codesign -vv -d AppRe.app</div><div class="line">* security find-identity -v -p codesigning</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* ./yololib Kuaikan.app/Kuaikan hook1.dylib</div><div class="line">* zip -qry AppRe.ipa Payload</div></pre></td></tr></table></figure>
+<p><a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逆向/">逆向</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-ios之CodeReview" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -243,59 +301,6 @@
 
 
   
-    <article id="post-APP设想--蔬菜水果平价" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/20/APP设想--蔬菜水果平价/" class="article-date">
-  	<time datetime="2017-03-19T16:00:00.000Z" itemprop="datePublished">2017-03-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/20/APP设想--蔬菜水果平价/">蔬菜水果平价</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一直觉得应该有一个关于蔬菜水果平价的小程序。<br>数据可以通过爬虫获取，<a href="http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml" target="_blank" rel="external">http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml</a> 满足小部分北漂群体做参考。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
     <article id="post-APP设想--火车漫步" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -323,6 +328,59 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最初有过这样的想法，创造一个火车上社交游戏的app，让大家在火车上不再那么陌生，那么无趣。让拥堵的空间多一份轻松，让旅途多一份欢笑。<br>曾在火车上遇到这么一件有趣的事，一家三口，爸妈是那种很风趣的人吧，把小儿子逗的一笑一笑的。半个车厢里都能听到他们有趣的对话。周边的人没有不满的，相反大家也会随着笑而露出微笑，也有人偶尔参与到逗乐的话题里。这一次的旅途很漫长，很有意思。<br>想着这样一个人群密集区，大家之间的行为也还是蛮友好的，相互帮助也很常见，如何增加互动的可能性呢。<br>大家的旅途目的地大多都是相同的，老乡见老乡，共同点较多，开往某一城市。<br>曾想过通过app将中国交通线点亮，后来在摩拜单车上看到了这一实现的可能性，点亮了一个个城市。<br>火车站点的开发也是机会很多。在旅途上就能知道目的地时刻发生的值得关注的事件。也为行程增加的期待，增加了更多的准备。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-APP设想--蔬菜水果平价" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/20/APP设想--蔬菜水果平价/" class="article-date">
+  	<time datetime="2017-03-19T16:00:00.000Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/20/APP设想--蔬菜水果平价/">蔬菜水果平价</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直觉得应该有一个关于蔬菜水果平价的小程序。<br>数据可以通过爬虫获取，<a href="http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml" target="_blank" rel="external">http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml</a> 满足小部分北漂群体做参考。</p>
 
       
     </div>
@@ -1000,63 +1058,6 @@
 <p>8、javascriptcore 对webview的操作调用</p>
 <p>9、基于第三方框架的聊天、直播<br>集成过 极光推送、极光IM 环信IM</p>
 <p>10、热更新 React-Native<br>现在算是入门阶段，还在挖坑</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-ios学习之runtime" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/01/06/ios学习之runtime/" class="article-date">
-  	<time datetime="2017-01-05T16:00:00.000Z" itemprop="datePublished">2017-01-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/06/ios学习之runtime/">ios学习之runtime</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>看到这篇对ios-runtime的讲解，<a href="http://www.imlifengfeng.com/blog/?cat=1" target="_blank" rel="external">http://www.imlifengfeng.com/blog/?cat=1</a> 质量相当高</li>
-<li>我才有意识的找到<code>NSObject</code>,<code>UIResponder</code>基础类，然后打开<code>#include &lt;objc/objc.h&gt;</code>,<code>#include &lt;objc/NSObjCRuntime.h&gt;</code>源码,然后跟着文章的讲解开始去理解这些基础类。</li>
-<li>类似的开始学习这些系统的类和方法。</li>
-<li>之前的开发中，为了使app得性能更好，也尽可能的去运用系统的方法去实现，去掉繁琐的封装。对于封装，我们要取之有道。对于github上的大部分第三方，设计的理念也不尽相同，性能也就不确定。我们不要一味的简单运用，也要抽空去试着理解去改造，当然大部分开发者也会这么做，因为这些与我们的app不可能完美契合。最后等我们考虑到后期的优化性能上的提升时，需要我们自己去封装和重构。</li>
-<li>‘YYKit’等知名的SDK的对性能处理值得我们学习，搬砖这个词请我们尽可能的减少，为了自我的提高。</li>
-<li></li>
-<li>开源的知识讲解，案例很多。我想不出为什么还要分享自己不经验的见解，现在网上类似的答案也太多，也就没必要多余的分享。等到我足够有信心做好分享的时候我也会开源的。毕竟我的知识从开源从大家的分享中得到的！感谢！</li>
-</ul>
 
       
     </div>
