@@ -5,28 +5,43 @@
   
   <title>ios之逆向尝试 | 波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://objccn.io/issue-17-2/
+  <meta name="description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
+https://objccn.io/issue-17-2/
 iOSAppHook
-12* class-dump -H Kuaikan.app* otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-12* codesign -vv -d AppRe.app* security find-identity -v -p codesigning
-12* ./yo">
+
+class-dump -H Kuaikan.app
+otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
+
+
+codesign -vv -d AppRe.app
+security">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios之逆向尝试">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/ios之逆向尝试/index.html">
 <meta property="og:site_name" content="波澜海底心">
-<meta property="og:description" content="https://objccn.io/issue-17-2/
+<meta property="og:description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
+https://objccn.io/issue-17-2/
 iOSAppHook
-12* class-dump -H Kuaikan.app* otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-12* codesign -vv -d AppRe.app* security find-identity -v -p codesigning
-12* ./yo">
-<meta property="og:updated_time" content="2017-04-18T07:10:05.000Z">
+
+class-dump -H Kuaikan.app
+otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
+
+
+codesign -vv -d AppRe.app
+security">
+<meta property="og:updated_time" content="2017-04-19T09:24:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios之逆向尝试">
-<meta name="twitter:description" content="https://objccn.io/issue-17-2/
+<meta name="twitter:description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
+https://objccn.io/issue-17-2/
 iOSAppHook
-12* class-dump -H Kuaikan.app* otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-12* codesign -vv -d AppRe.app* security find-identity -v -p codesigning
-12* ./yo">
+
+class-dump -H Kuaikan.app
+otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
+
+
+codesign -vv -d AppRe.app
+security">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -239,12 +254,23 @@ iOSAppHook
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
+        <p>最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的</p>
+<p><a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
 <p><a href="https://github.com/Urinx/iOSAppHook" target="_blank" rel="external">iOSAppHook</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* class-dump -H Kuaikan.app</div><div class="line">* otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* codesign -vv -d AppRe.app</div><div class="line">* security find-identity -v -p codesigning</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* ./yololib Kuaikan.app/Kuaikan hook1.dylib</div><div class="line">* zip -qry AppRe.ipa Payload</div></pre></td></tr></table></figure>
+<ul>
+<li>class-dump -H Kuaikan.app</li>
+<li>otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt</li>
+</ul>
+<ul>
+<li>codesign -vv -d AppRe.app</li>
+<li>security find-identity -v -p codesigning</li>
+</ul>
+<ul>
+<li>./yololib Kuaikan.app/Kuaikan hook1.dylib</li>
+<li>zip -qry AppRe.ipa Payload</li>
+</ul>
 <p><a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+<p>亲自尝试一遍你才会简单的明白   </p>
 
       
     </div>
