@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
+						<a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
 					</div>
 				</section>
 				
@@ -187,6 +187,84 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios之无网络无数据界面的友好显示" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/17/ios之无网络无数据界面的友好显示/" class="article-date">
+  	<time datetime="2017-01-16T16:00:00.000Z" itemprop="datePublished">2017-01-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/17/ios之无网络无数据界面的友好显示/">ios之无网络无数据界面的友好显示</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我把无网络和无数据的情况放在一起考虑   </p>
+<p> 监测网络状态</p>
+<ul>
+<li>Reachability是官方提供的检测网络连接和状态变化的接口类，我们可以引入文件到项目用其中的方法直接查看判断网络状态。但这种检测是一次性的。</li>
+<li>也可以在AppDelegate里注册通知，针对网络边话得监测。还可以单独写一个工厂类，将网络获取的状态的方法和属性定义下来。<ul>
+<li><a href="http://www.jianshu.com/p/d429c912d2c1" target="_blank" rel="external">http://www.jianshu.com/p/d429c912d2c1</a></li>
+<li><a href="https://github.com/CharlinFeng/CoreStatus" target="_blank" rel="external">https://github.com/CharlinFeng/CoreStatus</a>（实时监测）</li>
+<li>AFNetworking提供的网络监测（好用）</li>
+</ul>
+</li>
+</ul>
+<p>监测无数据状态</p>
+<ul>
+<li>UIView+NoData  (有待改进，倾向)</li>
+<li>UIViewController+NoData   </li>
+<li>UITableViewController+NoData  <ul>
+<li><a href="https://github.com/haijunblub/NoDataAndNoNetworkView" target="_blank" rel="external">https://github.com/haijunblub/NoDataAndNoNetworkView</a>（VC的空数据处理，基于uiview的类）</li>
+</ul>
+</li>
+</ul>
+<p>基于工厂类 BaseUI    </p>
+<p>基于DZNEmptyDataSet的封装 (完美)</p>
+<ul>
+<li><a href="https://github.com/NSUserDefault/EmptyDataRefreshDemo" target="_blank" rel="external">https://github.com/NSUserDefault/EmptyDataRefreshDemo</a></li>
+<li><a href="https://github.com/wochen85/ScrollViewFreshEmpty" target="_blank" rel="external">https://github.com/wochen85/ScrollViewFreshEmpty</a></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能模块推荐/">功能模块推荐</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-ios之app初级设计架构" class="article article-type-post" itemscope itemprop="blogPost">
   
