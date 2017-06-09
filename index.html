@@ -188,6 +188,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ios之runtime的认识" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/20/ios之runtime的认识/" class="article-date">
+  	<time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">2017-05-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/20/ios之runtime的认识/">ios之runtime的认识</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.imlifengfeng.com/" target="_blank" rel="external">http://www.imlifengfeng.com/</a> 没事多看看博客，常回味基础的概念。   </p>
+<p>Objc Runtime其实是一个Runtime库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。</p>
+<p>Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态类型、动态加载、动态绑定</p>
+<p>动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构上的变化。</p>
+<p>指针 和 数据结构(struct)<br>SEL方法选择器  id参数指针  Class类  Method方法  Ivar变量<br>IMP函数指针   Cache为方法调用的性能进行优化  Property属性</p>
+<p>消息传递 在方法的运行时实现被调用后才会返回数据。</p>
+<p>关键字 self -&gt; receiver</p>
+<p>APP生命周期<br>打开程序 -&gt; 入口：main函数 -&gt; UIApplicationMain -&gt; 创建app对象，设置代理 -&gt; 开启主线程RunLoop（事件循环） -&gt; 结束程序    </p>
+<p>UIApplicationDelegate 可以处理的事件包括应用程序的生命周期事件（比如程序启动和关闭）、系统事件（比如来电、记事项警 告）</p>
+<p>每条线程都有唯一的一个与之对应的RunLoop对象<br>CFRunLoopModeRef 保证界面滑动时不受其他Mode影响</p>
+<p>界面刷新并不一定是在setNeedsLayout相关的代码执行后立刻进行的</p>
+<p>在loadView之前，是没有view的（容器）-&gt; viewDidLoad</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-android studio 初步学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -220,6 +280,7 @@
 <p><a href="http://www.android-doc.com/index.html" target="_blank" rel="external">Android资源大全</a>  <a href="https://developer.android.google.cn/index.html" target="_blank" rel="external">android开发者文档</a></p>
 <p>根据开发者文档对语言和编辑器环境的熟悉。跟随着搭建简单的界面。<br>类对比ios的认识。应用的生命周期。</p>
 <p><a href="https://www.zhihu.com/question/26947538" target="_blank" rel="external">Android开发的经典入门教材和学习路线？</a><br>这篇文章推荐的内容值得我们去深入参考。</p>
+<p><a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">android-open-project</a> </p>
 <p><a href="https://gradle.org/" target="_blank" rel="external">通过brew安装gradle</a> 学习android要着重认识一下gradle！ 打包和链接第三方库</p>
 <p><a href="http://blog.csdn.net/u013519290/article/details/53728383" target="_blank" rel="external">打包apk测试</a> Perfect</p>
 <p>AndroidManifest.xml  主函数  权限配置 多渠道配置<br>Activity.java 活动界面  对应一个layout.xml<br>Adapter.java  类VM 绑定数据<br>Intent  数据传递<br>build.gradle 第三方库 签名   </p>
@@ -478,59 +539,6 @@
 
 
   
-    <article id="post-APP设想--火车漫步" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/20/APP设想--火车漫步/" class="article-date">
-  	<time datetime="2017-03-19T16:00:00.000Z" itemprop="datePublished">2017-03-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/20/APP设想--火车漫步/">火车漫步</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最初有过这样的想法，创造一个火车上社交游戏的app，让大家在火车上不再那么陌生，那么无趣。让拥堵的空间多一份轻松，让旅途多一份欢笑。<br>曾在火车上遇到这么一件有趣的事，一家三口，爸妈是那种很风趣的人吧，把小儿子逗的一笑一笑的。半个车厢里都能听到他们有趣的对话。周边的人没有不满的，相反大家也会随着笑而露出微笑，也有人偶尔参与到逗乐的话题里。这一次的旅途很漫长，很有意思。<br>想着这样一个人群密集区，大家之间的行为也还是蛮友好的，相互帮助也很常见，如何增加互动的可能性呢。<br>大家的旅途目的地大多都是相同的，老乡见老乡，共同点较多，开往某一城市。<br>曾想过通过app将中国交通线点亮，后来在摩拜单车上看到了这一实现的可能性，点亮了一个个城市。<br>火车站点的开发也是机会很多。在旅途上就能知道目的地时刻发生的值得关注的事件。也为行程增加的期待，增加了更多的准备。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
     <article id="post-APP设想--蔬菜水果平价" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -558,6 +566,59 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>一直觉得应该有一个关于蔬菜水果平价的小程序。<br>数据可以通过爬虫获取，<a href="http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml" target="_blank" rel="external">http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml</a> 满足小部分北漂群体做参考。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-APP设想--火车漫步" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/20/APP设想--火车漫步/" class="article-date">
+  	<time datetime="2017-03-19T16:00:00.000Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/20/APP设想--火车漫步/">火车漫步</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最初有过这样的想法，创造一个火车上社交游戏的app，让大家在火车上不再那么陌生，那么无趣。让拥堵的空间多一份轻松，让旅途多一份欢笑。<br>曾在火车上遇到这么一件有趣的事，一家三口，爸妈是那种很风趣的人吧，把小儿子逗的一笑一笑的。半个车厢里都能听到他们有趣的对话。周边的人没有不满的，相反大家也会随着笑而露出微笑，也有人偶尔参与到逗乐的话题里。这一次的旅途很漫长，很有意思。<br>想着这样一个人群密集区，大家之间的行为也还是蛮友好的，相互帮助也很常见，如何增加互动的可能性呢。<br>大家的旅途目的地大多都是相同的，老乡见老乡，共同点较多，开往某一城市。<br>曾想过通过app将中国交通线点亮，后来在摩拜单车上看到了这一实现的可能性，点亮了一个个城市。<br>火车站点的开发也是机会很多。在旅途上就能知道目的地时刻发生的值得关注的事件。也为行程增加的期待，增加了更多的准备。</p>
 
       
     </div>
@@ -686,360 +747,9 @@
 
 
   
-    <article id="post-觉得常用也很nice的资源" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/22/觉得常用也很nice的资源/" class="article-date">
-  	<time datetime="2017-02-21T16:00:00.000Z" itemprop="datePublished">2017-02-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/觉得常用也很nice的资源/">nice的github资源</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>获取知识的来源：cocochina、简书、gank、</p>
-<hr>
-<ul>
-<li><a href="">SDCycleScrollView</a>  轮播图 GGBannerView</li>
-<li><a href="">SDWebImage</a>  <a href="">FlyImage</a> 网络图 YYWebImage</li>
-<li><a href="">SDAutoLayout</a>  <a href="">Masonry</a> 自动布局 MyLinearLayout LayoutKit brickkit-ios</li>
-<li><a href="">YYModel</a> 模型 WHC_Model</li>
-<li><a href="">MBProgressHUD</a> <a href="">SVProgressHUD</a> 提示 CCActivityHUD HYToast Whisper NoticeBar FFToast</li>
-<li>Reachability 网络状态</li>
-<li>SVPullToRefresh 下拉刷新</li>
-<li>AFNetworking 网络请求</li>
-<li>FMDB 数据库 realm-cocoa</li>
-<li>pop 动画 ARAnimation IBAnimatable Advance DKChainableAnimationKit Spring hero AXAnimationChain</li>
-<li><code>ReactiveObjC</code> 新模式 RAC</li>
-<li>UITableView-FDTemplateLayoutCell 计算cellHeight</li>
-<li>TTTAttributedLabel 多属性label AttributedTextView</li>
-<li>NJKWebViewProgress 网页加载进度</li>
-<li>JDStatusBarNotification 顶部状态栏通知 DDStatusBarFlip EFInternetIndicator</li>
-<li>iCarousel 3D效果 Plum-O-Meter STPopupPreview</li>
-<li>GTMNSString-HTML html文本 MDHTMLLabel</li>
-<li>FXBlurView 模糊遮板 Blurable JKBlurPopup Blurry</li>
-<li>TMCache 缓存  kache  PINCache STMURLCache</li>
-<li>UIViewController-Swizzled 了解程序结构</li>
-<li>zen iOS, Swift, Objective-C 心得</li>
-<li>FDFullscreenPopGesture  全屏返回效果 KMNavigationBarTransition</li>
-<li>MMPlaceHolder 调试效果</li>
-<li>DateTools  日期处理</li>
-<li>MWPhotoBrowser 相册管理 IDMPhotoBrowser  RJPhotoGallery MTImagePicker SGPhotoBrowser YangMingShan ImagePicker FacebookImagePicker</li>
-<li>QBPopupMenu 类系统粘贴板</li>
-<li>TOWebViewController  类系统浏览器</li>
-<li>DZNEmptyDataSet 空数据显示</li>
-<li>trip-to-iOS  学习指南 study iOSWeekly</li>
-<li>SwiftGuide 学习指南 <code>atswift-2016-resources</code></li>
-<li>MPCoachMarks 新手引导提示界面 Instructions</li>
-<li>AttributedLabel 多文本</li>
-<li>dev-blog  </li>
-<li>MLLabel </li>
-<li>NYAlertViewController 自定义提示 MMPopupView  PMAlertControllerDQAlertView SCLAlertView-Objective-C Presentr  XLActionController PopupDialog CDAlertView<br>CFAlertViewController</li>
-<li>appleSample 官方合集 </li>
-<li>CocoaMultipeer 外设链接</li>
-<li>iOS-day-by-day  TomatoRead</li>
-<li>CHXWelcomeViewController 视频欢迎界面 STLBGVideo BackgroundVideoiOS</li>
-<li>NSLogger  Willow</li>
-<li>DemoBackgroundLocationUpdate 后台定位上传</li>
-<li>pangu.objective-c 中英文格式化空格</li>
-<li>JSQMessagesViewController 发送到短信</li>
-<li>StackTableView 折叠cell效果 SFFocusViewLayout StickyCollectionView folding-cell DetailsMatter</li>
-<li>Awsome-Apple-Develop-Guide</li>
-<li>EYTagView 标签 AJMyTags SelectTag SearchHistory automatic-height-tagcells DraggingSort</li>
-<li>GTScrollNavigationBar  LTNavigationBar</li>
-<li>koknine 开发总结 </li>
-<li>meituan </li>
-<li>RegexKitLite 正则表达式</li>
-<li>BlocksKit block工具包</li>
-<li>hpple  html解析 Ji</li>
-<li>Coding-iOS  源代码 MrCode</li>
-<li>CoolNavi</li>
-<li>MTMaterialDelete 擦除效果</li>
-<li>BezierString 贝塞尔曲线</li>
-<li>LiquidFloatingActionButton  右下弹出菜单按钮</li>
-<li>MLAutoReplace 插件 iOSCategoryPropertyDynamicSupport<br>ESTranslate-Xcode</li>
-<li>mobileplayer-ios 视频播放 kxmovie ZFPlayer KRVideoPlayer PLPlayerKit CTVideoPlayerView VKVideoPlayer</li>
-<li>itjh_3DTouch PeekPop  Plum-O-Meter</li>
-<li>BonMot    attributed strings  富文本</li>
-<li>FDStackView 布局</li>
-<li>BabyBluetooth 蓝牙连接 BluetoothKit</li>
-<li>bilibili-mac-client</li>
-<li>MMMarkdown 转化为HTML文本</li>
-<li>MJPopupViewController 弹出样式</li>
-<li>EasyIOS-Swift MVVM框架</li>
-<li>StatusBarNotificationCenter</li>
-<li>KMCGeigerCounter 检测卡顿</li>
-<li>SBShortcutMenuSimulator 模拟器3Dtouch</li>
-<li>WordPress-Editor-iOS 编辑器组件</li>
-<li>NirZhihuDaily2.0 知乎源码</li>
-<li>RxWebViewController 微信网页</li>
-<li>PassportScanner 护照扫描</li>
-<li>TKSwitcherCollection</li>
-<li>ParseSourceCodeStudy Facebook开源的Parse源码分析【系列】</li>
-<li>HWWeakTimer  SwiftyTimer</li>
-<li>iOS-blog-acticle</li>
-<li>SCTableViewCell 滑动右侧菜单</li>
-<li>ALCameraViewController 相机 CTCamera</li>
-<li>LLSlideMenu 侧滑菜单</li>
-<li>Chatto 聊天  XMChatBarExample PonyChatUIV2  NoChat NIM_iOS_UIKit     NMessenger</li>
-<li>Onboard 引导页</li>
-<li>Mapper </li>
-<li>Material</li>
-<li>MBMotion</li>
-<li>ESTMusicPlayer 音乐播放器源码</li>
-<li>iOS-Echarts 图标 </li>
-<li>Hodor 跟随系统语言  Localize-Swift 国际化</li>
-<li>HeapInspector-for-iOS 检测内存泄露</li>
-<li>TransitionTreasury 转场库 TransitionTreasury</li>
-<li>FFChineseSort 中文数组排序 汉子转拼音分类</li>
-<li>Pitaya  Alamofire</li>
-<li>IOSAnimationDemo 动画demo Animations DevArticles<br>NVActivityIndicatorView fantastic-ios-animation </li>
-<li>CurveDemo 心跳线  UIKitDynamics </li>
-<li>DoubleThumbSlider 双滑块控件</li>
-<li>MMPaper </li>
-<li>TZImagePickerController 支持多选、选原图和视频的图片选择器 ZLPhotoBrowser AJPhotoPicker MWPhotoBrowser PYPhotoBrowser  ESPictureBrowser</li>
-<li>DOPDropDownMenu-Enhanced 下拉菜单 CCDropDownMenu</li>
-<li>LMCalendarView 日历 FSCalendar LunarCore MCalendarFramework Daysquare ZBJCalendar Koyomi HYYCalendar ZYCalendar LWCalendar JTAppleCalendar</li>
-<li>SpreadButton  LGPlusButtonsView</li>
-<li>RainbowNavigation 导航栏背景 GSKStretchyHeaderView</li>
-<li>animated-tab-bar 主基础控件 LearnCube-iOS ESTabBarController</li>
-<li>TReaderBook 图文混排</li>
-<li>GCDDemo</li>
-<li>SwiftString 扩展 ExSwift</li>
-<li>EarlGrey 自动化测试</li>
-<li>SwViewCapture 截图库 TOCropViewController TKImageView</li>
-<li>swiftBookRecommend</li>
-<li>Kitura  nimbus 框架 </li>
-<li>EventLogger 时间时间记录 和次数统计  Duration </li>
-<li>SwiftLint 代码规则 CleanArchitectureRxSwift</li>
-<li>LGSideMenuController 侧滑菜单</li>
-<li>prankPro 短视频 TBPlayer </li>
-<li>UITextView-Placeholder</li>
-<li>ActionSheetController</li>
-<li>iOS-Developer-Interview-Questions 面试题iOSInterviewQuestions</li>
-<li>SwiftGG SwiftGGApp</li>
-<li>Popover 泡泡弹出框 NirKxMenu 菜单  EasyTipView</li>
-<li>BlurryModalSegue  蒙版  FillableLoaders</li>
-<li>EZAudio 音频可视化</li>
-<li>Bolts-Swift 异步操作</li>
-<li>WWDCVideosDownloadURLCrawler 抓取</li>
-<li>Permission 权限访问 PAPermissions arek</li>
-<li>DynamicColor 颜色库 Hue  BCColor  Chameleon</li>
-<li>CLImageEditor 图像编辑</li>
-<li>Bond swift 绑定数据</li>
-<li>ZYThumbnailTableView 可预览的cell</li>
-<li>MangoTools SwiftMoment</li>
-<li>LBAES 加密 SwCrypt</li>
-<li>FBMemoryProfiler 分析内存</li>
-<li>MVVM RxTodo </li>
-<li>AImage  SwiftyGif PINRemoteImage</li>
-<li>MXCardLayout 多任务卡片 Koloda FlickToDismiss</li>
-<li>YKLineChartView 股票K线图 Y_KLine  JSUStockChat JSUStockChat</li>
-<li>TTNews  WBZhiHuDailyPaper</li>
-<li>Caishen 信用卡号 CreditCardForm-iOS</li>
-<li>Why-Reject  苹果store拒绝理由</li>
-<li>Koloda 类似探探卡片效果 expanding-collection gliding-collection</li>
-<li>UXKit  Olla4iOS AssistantKit AppDevKit</li>
-<li>MLeaksFinder 内存泄漏 PLeakSniffer</li>
-<li>JASON</li>
-<li>paper-onboarding 页面滑块 </li>
-<li>SMSegmentView DAPagesContainer XLPagerTabStrip BetterSegmentedControl DGRunkeeperSwitch VTMagic<br>TabPageViewController TwicketSegmentedControl SJFluidSegmentedControl PinterestSegment SegmentedControl WDScrollableSegmentedControl PageMenu</li>
-<li>DKNightVersion 夜间模式 SwiftTheme  NightNight NightModeTransition</li>
-<li>GSD_WeiXin  openshop.io-ios</li>
-<li>Charts 数据表 WHChartView Scrollable-GraphView Graphs WYChart PieCharts</li>
-<li>BeautifyFace 美颜滤镜 BeautifyFaceAndDetection Sharaku</li>
-<li>BarrageRenderer 弹幕</li>
-<li>Toast-Swift </li>
-<li>ScreenShotBack 手势返回   XLPopGesture  FDFullscreenPopGesture </li>
-<li>PatronKit 内购</li>
-<li>Smile-Lock  GesturePassword </li>
-<li>Pulsator</li>
-<li>LeeGo UI模块化 思路</li>
-<li>ParticlesLoadingView</li>
-<li>Stellar 动画库 TRX</li>
-<li>IQKeyboardManager  UIViewController-KeyboardAnimation WHC_KeyboardManager</li>
-<li>iOS-Source-Code-Analyze</li>
-<li>ios-swift-collapsible-table-section</li>
-<li>OS-OctoPodium</li>
-<li>Kingfisher</li>
-<li>YTKNetwork</li>
-<li>JPFPSStatus 渲染</li>
-<li>FileBrowser 文件浏览</li>
-<li>ActionLabel</li>
-<li>Toucan 图像</li>
-<li>SpeechRecognition 语音识别添加字幕</li>
-<li>Reusable </li>
-<li>vapor  webframe</li>
-<li>RateLimit 限制执行数</li>
-<li>tween-controller 切换动画 View2ViewTransition</li>
-<li>Iconic UI库</li>
-<li>Xcode-Search 插件</li>
-<li>Potatso</li>
-<li>SwiftLinkPreview 网页预览</li>
-<li>TinyPNG4Mac</li>
-<li>iOSUrlRoute</li>
-<li>iOS_Emoji 系统表情 EmojiTextView IoniconsKit</li>
-<li>Money 货币转换</li>
-<li>Then </li>
-<li>droptogif 将视频转成gif</li>
-<li>KVParkedTextField 占位</li>
-<li>SkyFloatingLabelTextField TextFieldEffects</li>
-<li>PromiseKit</li>
-<li>Celluloid 图片处理 CameraStickerDemo</li>
-<li>MD360Player4iOS  vr</li>
-<li>RaceMe 追踪</li>
-<li>JLStickerTextView  编辑图片 PixPic</li>
-<li>WXProgressWindow 悬浮进度 </li>
-<li>awesome-mac</li>
-<li>LBXScan 二维码 </li>
-<li>Maria 下载 JSDownloadView UbiqArchView</li>
-<li>AMScrollingNavbar</li>
-<li>lumen 调亮度</li>
-<li>FaceAware</li>
-<li>inbox-replica 下拉展开cell效果 FlickTransition</li>
-<li>BEMCheckBox</li>
-<li>iOS-UIFontFamilyNamesPreview</li>
-<li>IBAnimatableMaterial  点击水波效果 </li>
-<li>EvernoteAnimation</li>
-<li>VRMediaPlayer-iOS</li>
-<li>RSKGrowingTextView</li>
-<li>PageControls YTPageController   FSPagerView BouncyPageViewController CRPageViewController</li>
-<li>simplenote-ios Dropnote-iOS</li>
-<li>youtube-iOS</li>
-<li>Podcasts</li>
-<li>ifanr</li>
-<li>StyleKit FontAwesomeKit.Swift</li>
-<li>LFLiveKit 直播</li>
-<li>ohana-ios 联系人</li>
-<li>PinpointKit 测试反馈</li>
-<li>Helium</li>
-<li>AvatarImageView </li>
-<li>OnboardingKit 引导页</li>
-<li>SmoothMovingAnnotation 地图大头针</li>
-<li>FeedbackKit 反馈</li>
-<li>ChineseIDCardOCR</li>
-<li>ImageMaskTransition ZoomTransitioning</li>
-<li>FOUR</li>
-<li>DCURLRouter</li>
-<li>EHHorizontalSelectionView</li>
-<li>LFRtmp 滤镜</li>
-<li>GenericPasswordRow 密码强弱</li>
-<li>QMUI_iOS_CodeSnippets</li>
-<li>iOS-10-Sampler</li>
-<li>DCShade 渐变色 Pastel</li>
-<li>12306ForMac</li>
-<li>StatusProvider 空数据</li>
-<li>AnyRTC-RTMP 直播</li>
-<li>CircularSpinner  进度 UICircularProgressRing HGCircularSlider</li>
-<li>Progressable  </li>
-<li>ParallaxView  浮动cell</li>
-<li>iOS-10-Steps-Widget 步行</li>
-<li>ImageSlideshow</li>
-<li>HubFramework</li>
-<li>Probably</li>
-<li>ForceBlur</li>
-<li>RxKeyboard</li>
-<li>SwiftDate 日期操作 DateTimePicker</li>
-<li>MacSetup</li>
-<li>make-icons</li>
-<li>RandomUserSwift 自动生成测试数据 RandomKit</li>
-<li>DesignerNewsApp </li>
-<li>SwiftMessages</li>
-<li>BouncyPageViewController</li>
-<li>TimelineTableViewCell</li>
-<li>Each 计时</li>
-<li>FRDIntent</li>
-<li>kap 录制gif</li>
-<li>Wallet 卡包</li>
-<li>Wallet</li>
-<li>CascadingTableDelegate</li>
-<li>BeeHive 模块化</li>
-<li>RainyRefreshControl</li>
-<li>NELineLabel</li>
-<li>IGListKit</li>
-<li>TTGPuzzleVerify 拼图验证</li>
-<li>Eureka 表单</li>
-<li>ios-oss</li>
-<li>SwiftRichString</li>
-<li>UXPasscodeField 密码</li>
-<li>LCStarRatingView 打分</li>
-<li>PYTheme</li>
-<li>PhoneNumberKit 手机号</li>
-<li>EasyMap 地图</li>
-<li>KRActivityIndicatorView 加载效果</li>
-<li>Swift-CellAnimation  </li>
-<li>MIBlurPopup 模糊背景面板</li>
-<li>AnimatedCollectionViewLayout</li>
-<li>TodayMind</li>
-<li>LazyScrollView 阿里巴巴</li>
-<li>CHIPageControl</li>
-<li>BMASpinningLabel  title切换</li>
-<li>GodEye 监控</li>
-<li>open-source-ios-apps</li>
-<li>ActionSheetPicker 选择器</li>
-<li>FLEX debug模式</li>
-<li>PPMusicImageShadow 图片效果</li>
-<li>RequestPermission 获取权限</li>
-<li>SelectableTextView</li>
-<li>JDCHorizontalTableView </li>
-<li>AwesomeIntroGuideView 引导操作</li>
-<li>HelloGitHub 有趣易懂的项目</li>
-<li>SGPlayer 播放器</li>
-<li>SwiftyImage 强大的图片属性拓展</li>
-<li>YetAnotherAnimationLibrary 动画</li>
-<li>ScratchCardView 擦除效果</li>
-<li>CoordinateAxisChart 坐标轴</li>
-<li>LinearProgressView 进度条</li>
-<li>CCGestureLock-Swift 手势锁</li>
-<li>AlertTransition 弹窗动画</li>
-<li>game-programmer 游戏开发</li>
-<li>BouncyLayout </li>
-<li>aurora-imui IM聊天组件</li>
-<li>TestDrive 测试第三方库</li>
-<li>SwiftPullToRefresh</li>
-</ul>
-<hr>
-<p><a href="http://adad184.com/" target="_blank" rel="external">http://adad184.com/</a><br><a href="http://kittenyang.com/" target="_blank" rel="external">http://kittenyang.com/</a><br><a href="http://tech.meituan.com/" target="_blank" rel="external">http://tech.meituan.com/</a><br><a href="http://swift.gg/" target="_blank" rel="external">http://swift.gg/</a><br><a href="http://tips.producter.io/" target="_blank" rel="external">http://tips.producter.io/</a><br><a href="http://tech.glowing.com/cn/" target="_blank" rel="external">http://tech.glowing.com/cn/</a><br><a href="https://lvwenhan.com" target="_blank" rel="external">https://lvwenhan.com</a><br><a href="http://atswift.io/" target="_blank" rel="external">http://atswift.io/</a><br><a href="http://pingguohe.net/" target="_blank" rel="external">http://pingguohe.net/</a><br><a href="http://blog.callmewhy.com/" target="_blank" rel="external">http://blog.callmewhy.com/</a><br><a href="http://swiftcafe.io/" target="_blank" rel="external">http://swiftcafe.io/</a><br><a href="http://blog.devtang.com/" target="_blank" rel="external">http://blog.devtang.com/</a><br><a href="http://liumh.com/" target="_blank" rel="external">http://liumh.com/</a><br><a href="http://yulingtianxia.com/" target="_blank" rel="external">http://yulingtianxia.com/</a><br><a href="http://pandara.xyz/" target="_blank" rel="external">http://pandara.xyz/</a><br><a href="http://www.rockerhx.com/archives/" target="_blank" rel="external">http://www.rockerhx.com/archives/</a><br><a href="http://www.cocoachina.com/ios/20160121/14988.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20160121/14988.html</a><br><a href="http://wereadteam.github.io/archives/" target="_blank" rel="external">http://wereadteam.github.io/archives/</a><br><a href="http://xn--rgvu79ah1g.com/" target="_blank" rel="external">http://xn--rgvu79ah1g.com/</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
