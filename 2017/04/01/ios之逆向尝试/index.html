@@ -6,42 +6,39 @@
   <title>ios之逆向尝试 | 波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
-https://objccn.io/issue-17-2/
+重签名的认识https://objccn.io/issue-17-2/
 iOSAppHook
+推荐 ：iOS微信自动抢红包实践
+下载PP助手上去过壳的IPA
+dump 头文件
 
 class-dump -H Kuaikan.app
-otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-
-
-codesign -vv -d AppRe.app
-security">
+otool -l  Kuaikan.app/Kuaikan  |grep -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios之逆向尝试">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/ios之逆向尝试/index.html">
 <meta property="og:site_name" content="波澜海底心">
 <meta property="og:description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
-https://objccn.io/issue-17-2/
+重签名的认识https://objccn.io/issue-17-2/
 iOSAppHook
+推荐 ：iOS微信自动抢红包实践
+下载PP助手上去过壳的IPA
+dump 头文件
 
 class-dump -H Kuaikan.app
-otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-
-
-codesign -vv -d AppRe.app
-security">
-<meta property="og:updated_time" content="2017-04-19T09:24:18.000Z">
+otool -l  Kuaikan.app/Kuaikan  |grep -">
+<meta property="og:updated_time" content="2017-08-14T03:34:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios之逆向尝试">
 <meta name="twitter:description" content="最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的
-https://objccn.io/issue-17-2/
+重签名的认识https://objccn.io/issue-17-2/
 iOSAppHook
+推荐 ：iOS微信自动抢红包实践
+下载PP助手上去过壳的IPA
+dump 头文件
 
 class-dump -H Kuaikan.app
-otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt
-
-
-codesign -vv -d AppRe.app
-security">
+otool -l  Kuaikan.app/Kuaikan  |grep -">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -143,7 +140,7 @@ security">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
+						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/抓包/" style="font-size: 10px;">抓包</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
 					</div>
 				</section>
 				
@@ -255,21 +252,26 @@ security">
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的</p>
-<p><a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
+<p>重签名的认识<a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
 <p><a href="https://github.com/Urinx/iOSAppHook" target="_blank" rel="external">iOSAppHook</a></p>
+<p>推荐 ：<a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+<p>下载PP助手上去过壳的IPA</p>
+<p>dump 头文件</p>
 <ul>
 <li>class-dump -H Kuaikan.app</li>
 <li>otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt</li>
 </ul>
+<p>获取IPA信息</p>
 <ul>
 <li>codesign -vv -d AppRe.app</li>
 <li>security find-identity -v -p codesigning</li>
 </ul>
+<p>dylib注入</p>
 <ul>
 <li>./yololib Kuaikan.app/Kuaikan hook1.dylib</li>
 <li>zip -qry AppRe.ipa Payload</li>
 </ul>
-<p><a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+<p>重签名打包</p>
 <p>亲自尝试一遍你才会简单的明白   </p>
 
       

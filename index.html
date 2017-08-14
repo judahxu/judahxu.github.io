@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
+						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/抓包/" style="font-size: 10px;">抓包</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
 					</div>
 				</section>
 				
@@ -187,6 +187,68 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios之抓取手机APP数据" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/05/ios之抓取手机APP数据/" class="article-date">
+  	<time datetime="2017-06-04T16:00:00.000Z" itemprop="datePublished">2017-06-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/05/ios之抓取手机APP数据/">ios之抓取手机APP数据</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直在翻稀土掘金的老黄历，错过了很多技术文章。   </p>
+<p>最近接到外包任务，需要模仿一些app，就尝试着抓取相应类的APP数据。   </p>
+<p>推荐一篇文章<a href="http://www.jianshu.com/p/5539599c7a25" target="_blank" rel="external">十分钟学会Charles抓包(iOS的http/https请求)</a><br>步骤就是按照这个完成的，没什么难度。<br>1、安装Charles<br>2、设置手机http代理，IP地址和电脑同步 端口：8888<br>3、安装SSL证书 Help -&gt; SSL Proxying -&gt; Install Charles Root Certificate on a Mobile Device  打开手机浏览器<a href="http://judahxu.github.io/chls.pro/ssl" target="_blank" rel="external">chls.pro/ssl</a></p>
+<p>亲测要(1)设置好手机HTTP代理 (2)电脑上Charles要开着</p>
+<p>注意：iOS 10.3系统，需要在 设置→通用→关于本机→证书信任设置 里面启用完全信任Charles证书</p>
+<p>4、浏览手机APP开始抓取数据</p>
+<p>抓取数据 可以发现很多APP数据上的处理除了HTTPS加密一层，还会有个ID随机标示符进行加密处理，每一次的请求这个唯一参数是不同的。</p>
+<p><a href="http://www.cmd5.com/" target="_blank" rel="external">在线解密</a></p>
+<p>抓取了几个APP后，无奈的举措是得到的数据json串放到本地进行处理。</p>
+<p>有个难点是获取到的web网址会带有相应APP的标示，需要我们通过webView与JavaScript 对相应的标签类型进行隐藏。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/抓包/">抓包</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-ios之runtime的认识" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -442,21 +504,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近学习这个是因为去某个公司面试后被教育了 就尝试着逆向他们的app尝试 看看别人是怎么搞的</p>
-<p><a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
+<p>重签名的认识<a href="https://objccn.io/issue-17-2/" target="_blank" rel="external">https://objccn.io/issue-17-2/</a></p>
 <p><a href="https://github.com/Urinx/iOSAppHook" target="_blank" rel="external">iOSAppHook</a></p>
+<p>推荐 ：<a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+<p>下载PP助手上去过壳的IPA</p>
+<p>dump 头文件</p>
 <ul>
 <li>class-dump -H Kuaikan.app</li>
 <li>otool -l  Kuaikan.app/Kuaikan  |grep -B 2 crypt</li>
 </ul>
+<p>获取IPA信息</p>
 <ul>
 <li>codesign -vv -d AppRe.app</li>
 <li>security find-identity -v -p codesigning</li>
 </ul>
+<p>dylib注入</p>
 <ul>
 <li>./yololib Kuaikan.app/Kuaikan hook1.dylib</li>
 <li>zip -qry AppRe.ipa Payload</li>
 </ul>
-<p><a href="http://www.jianshu.com/p/51e3abc7d7b6" target="_blank" rel="external">iOS微信自动抢红包实践</a></p>
+<p>重签名打包</p>
 <p>亲自尝试一遍你才会简单的明白   </p>
 
       
@@ -682,55 +749,6 @@
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
 	</div>
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-整理后感" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/13/整理后感/" class="article-date">
-  	<time datetime="2017-03-12T16:00:00.000Z" itemprop="datePublished">2017-03-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/整理后感/">整理后感</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近重新整理了一下nice的开源知识，重温并更新了一些知识理解。<br>发现swift相关的开源文档最近在加速迸发，3.0版本的相对稳定，使得更多的开发者转战这里。更加简洁易懂的语法知识使得开发更加快速。新的模式MVVM+ReactiveCocoa,函数式编程与swift的结合更受大家的喜爱。解放VC，将数据在模型中绑定。<br>例：<a href="https://github.com/Wildog/Gankee" target="_blank" rel="external">Gankee</a><br>RAC的运用使我们觉得代码形式别具风格，值得学习了解这种模式。<br>最后提一下，最近很多开发者收到苹果官方邮件针对热更新的警告，热更新对于开发的便利显而易见，结合最近swift的发力，觉得热更新从这方面入手会有意想不到效果。<br>最近要尝试下 RAC</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
       
 
       
