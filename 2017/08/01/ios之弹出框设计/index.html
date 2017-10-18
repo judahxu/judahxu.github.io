@@ -3,27 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ios之runtime的认识 | 波澜海底心</title>
+  <title>ios之弹出框设计 | 波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http://www.imlifengfeng.com/ 没事多看看博客，常回味基础的概念。   
-Objc Runtime其实是一个Runtime库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。
-Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态类型、动态加载、动态绑定
-动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构">
+  <meta name="description" content="CKAlertViewController  简洁的弹出框 alertView
+JHUD 过渡动画、空页面  全屏
+MBProgressHUD-MJ 封装MBProgressHUD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios之runtime的认识">
-<meta property="og:url" content="http://yoursite.com/2017/05/20/ios之runtime的认识/index.html">
+<meta property="og:title" content="ios之弹出框设计">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/ios之弹出框设计/index.html">
 <meta property="og:site_name" content="波澜海底心">
-<meta property="og:description" content="http://www.imlifengfeng.com/ 没事多看看博客，常回味基础的概念。   
-Objc Runtime其实是一个Runtime库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。
-Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态类型、动态加载、动态绑定
-动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构">
-<meta property="og:updated_time" content="2017-06-09T08:52:57.000Z">
+<meta property="og:description" content="CKAlertViewController  简洁的弹出框 alertView
+JHUD 过渡动画、空页面  全屏
+MBProgressHUD-MJ 封装MBProgressHUD">
+<meta property="og:updated_time" content="2017-10-18T07:56:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios之runtime的认识">
-<meta name="twitter:description" content="http://www.imlifengfeng.com/ 没事多看看博客，常回味基础的概念。   
-Objc Runtime其实是一个Runtime库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。
-Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态类型、动态加载、动态绑定
-动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构">
+<meta name="twitter:title" content="ios之弹出框设计">
+<meta name="twitter:description" content="CKAlertViewController  简洁的弹出框 alertView
+JHUD 过渡动画、空页面  全屏
+MBProgressHUD-MJ 封装MBProgressHUD">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -199,11 +196,11 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-ios之runtime的认识" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ios之弹出框设计" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/20/ios之runtime的认识/" class="article-date">
-  	<time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">2017-05-20</time>
+      <a href="/2017/08/01/ios之弹出框设计/" class="article-date">
+  	<time datetime="2017-08-01T07:43:42.000Z" itemprop="datePublished">2017-08-01</time>
 </a>
     </div>
   
@@ -216,7 +213,7 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
         
   
     <h1 class="article-title" itemprop="name">
-      ios之runtime的认识
+      ios之弹出框设计
     </h1>
   
 
@@ -224,6 +221,10 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能模块推荐/">功能模块推荐</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -232,18 +233,9 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.imlifengfeng.com/" target="_blank" rel="external">http://www.imlifengfeng.com/</a> 没事多看看博客，常回味基础的概念。   </p>
-<p>Objc Runtime其实是一个Runtime库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。</p>
-<p>Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态类型、动态加载、动态绑定</p>
-<p>动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构上的变化。</p>
-<p>指针 和 数据结构(struct)<br>SEL方法选择器  id参数指针  Class类  Method方法  Ivar变量<br>IMP函数指针   Cache为方法调用的性能进行优化  Property属性</p>
-<p>消息传递 在方法的运行时实现被调用后才会返回数据。</p>
-<p>关键字 self -&gt; receiver</p>
-<p>APP生命周期<br>打开程序 -&gt; 入口：main函数 -&gt; UIApplicationMain -&gt; 创建app对象，设置代理 -&gt; 开启主线程RunLoop（事件循环） -&gt; 结束程序    </p>
-<p>UIApplicationDelegate 可以处理的事件包括应用程序的生命周期事件（比如程序启动和关闭）、系统事件（比如来电、记事项警 告）</p>
-<p>每条线程都有唯一的一个与之对应的RunLoop对象<br>CFRunLoopModeRef 保证界面滑动时不受其他Mode影响</p>
-<p>界面刷新并不一定是在setNeedsLayout相关的代码执行后立刻进行的</p>
-<p>在loadView之前，是没有view的（容器）-&gt; viewDidLoad</p>
+        <p><a href="https://github.com/Pr-Chen/CKAlertViewController" target="_blank" rel="external">CKAlertViewController</a>  简洁的弹出框 alertView</p>
+<p><a href="https://github.com/Jinxiansen/JHUD" target="_blank" rel="external">JHUD</a> 过渡动画、空页面  全屏</p>
+<p><a href="https://github.com/WenjieZhang1988/MBProgressHUD" target="_blank" rel="external">MBProgressHUD-MJ</a> 封装MBProgressHUD</p>
 
       
     </div>
@@ -253,18 +245,9 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
     
 <nav id="article-nav">
   
-    <a href="/2017/06/05/ios之抓取手机APP数据/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ios之抓取手机APP数据
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/15/android studio 初步学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">android studio 初步学习</div>
+    <a href="/2017/08/01/ios之导航栏显隐手势/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ios之导航栏显隐手势</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -293,7 +276,7 @@ Objective-C 封装：隐藏属性方法、继承：点语法、多态：动态�
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ios之runtime的认识" data-title="ios之runtime的认识" data-url="http://yoursite.com/2017/05/20/ios之runtime的认识/"></div>
+	<div class="ds-thread" data-thread-key="ios之弹出框设计" data-title="ios之弹出框设计" data-url="http://yoursite.com/2017/08/01/ios之弹出框设计/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
