@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/抓包/" style="font-size: 10px;">抓包</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
+						<a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/功能模块/" style="font-size: 10px;">功能模块</a> <a href="/tags/功能模块推荐/" style="font-size: 15px;">功能模块推荐</a> <a href="/tags/我发现系列/" style="font-size: 20px;">我发现系列</a> <a href="/tags/抓包/" style="font-size: 10px;">抓包</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a>
 					</div>
 				</section>
 				
@@ -187,6 +187,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios之导航栏显隐手势" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/01/ios之导航栏显隐手势/" class="article-date">
+  	<time datetime="2017-07-31T16:00:00.000Z" itemprop="datePublished">2017-08-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/01/ios之导航栏显隐手势/">ios之导航栏显隐手势</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>苹果返回手势的操作是提升体验的重要一步   </p>
+<p><a href="https://github.com/forkingdog/FDFullscreenPopGesture" target="_blank" rel="external">FDFullscreenPopGesture</a> 无需添加额外代码就可以实现所有界面的返回手势</p>
+<p>系统导航栏手势返回后就涉及到透明度问题 <a href="https://github.com/wangrui460/WRNavigationBar" target="_blank" rel="external">WRNavigationBar</a></p>
+<p>ios某些系统（如9.0会出现妖孽的position位置偏移） </p>
+<p>建议：<br>1、设置CGRectZero从导航栏下开始计算<br>self.edgesForExtendedLayout = UIRectEdgeNone;<br>2、自定义导航栏（隐藏系统导航栏）</p>
+<p>iPhoneX 导航的高度有所变化 安全区域的边缘距离</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能模块/">功能模块</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-ios之抓取手机APP数据" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -686,59 +744,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>一直觉得应该有一个关于蔬菜水果平价的小程序。<br>数据可以通过爬虫获取，<a href="http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml" target="_blank" rel="external">http://www.xinfadi.com.cn/marketanalysis/0/list/1.shtml</a> 满足小部分北漂群体做参考。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我发现系列/">我发现系列</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-APP设想--3·15晚会" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/16/APP设想--3·15晚会/" class="article-date">
-  	<time datetime="2017-03-16T07:43:42.000Z" itemprop="datePublished">2017-03-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/16/APP设想--3·15晚会/">3·15晚会</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每一年的315晚会都揭露一些代表性消费欺诈现象，引起大家的广泛关注。当然这些只是小部分，还有很多曾上热搜的相关消费问题。<br>一年一提醒，可是消费欺诈手段也在升级，上当受骗依旧。大家的关注热情并没有持久力，毕竟亲身遇到的次数少，但受骗人群量大。<br>关于曝光的后续问题不知道有多少人继续深究下去。<br>跟朋友讨论的时候，昨天刚好315工商举报的小程序上线，那么是不是也该上线一个，展示每年315事件以及曾上热搜的问题事件，消费曝光的后续解决，还可以罗列一些消费遇到的问题排行，让曾受到坑害的人发表点赞参与。给予大家一种提示警醒。<br>3·15 这么叼 为啥没有一个相关平台陈列一下 重要信息呢 好神奇！<br>可以考虑自己做一个公益性的宣传</p>
 
       
     </div>
