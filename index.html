@@ -188,6 +188,56 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ios之随机圆的动画效果" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/25/ios之随机圆的动画效果/" class="article-date">
+  	<time datetime="2017-09-24T16:00:00.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/25/ios之随机圆的动画效果/">ios之随机圆的动画效果</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/erduoniba/HDRandomViewDemo" target="_blank" rel="external">iOS之两圆之间标准圆的随机生成</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#define degreesToRadians(degrees) ((degrees * (float)M_PI) / 180.0f) </div><div class="line"></div><div class="line">float dist //半径</div><div class="line">NSInteger maxCirNum  //圆个数</div><div class="line"></div><div class="line"> for (int i= 1; i&lt;=_maxCirNum;i++) &#123;</div><div class="line"></div><div class="line"> 	float angle = degreesToRadians((360 / _maxCirNum) * i); //角度</div><div class="line">        </div><div class="line">        float y = cos(angle) * dist;     </div><div class="line">        float x = sin(angle) * dist;</div><div class="line">        // 距中心的x,y坐标</div><div class="line">        </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-swift基础学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -690,57 +740,6 @@
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能模块推荐/">功能模块推荐</a></li></ul>
 	</div>
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-面试有感" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/04/20/面试有感/" class="article-date">
-  	<time datetime="2017-04-19T16:00:00.000Z" itemprop="datePublished">2017-04-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/面试有感/">面试有感</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>清明节后一周收到一些面试邀请，公司项目要求的都是swift。<br>见面和技术老大等聊得感觉没什么毛病，但是事后没有收到就职机会，很是失望。这几家公司的氛围都还是很好的。<br>有关面试的内容都有关于swift，之前自己虽然尝试过，但是遇到问题还是得好好思量，基于oc的swift的尝试。<br>缺少一些实际操作，认识上也有所欠缺。<br>想想我的优势：oc/swift的熟练应用，浏览大量大第三方库，用到什么功能也能及时找到资源并修改运用 js html react-native ReactiveObjC 这些都搭建并尝试过，有一定得认识。独立开发的过程，对一个APP从0到1的认识   对于查找解决问题也很迅速。</p>
-<p>最近公司的改版项目用了RAC，对于内容更熟悉的前提下，选用了更好的第三方库，逻辑也简化很多。代码量也减少了</p>
-<p>接下来要继续深入swift</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
       
 
       

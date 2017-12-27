@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | 波澜海底心</title>
+  <title>ios之随机圆的动画效果 | 波澜海底心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="波澜海底心">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/3/index.html">
+  <meta name="description" content="iOS之两圆之间标准圆的随机生成
+1234567891011121314#define degreesToRadians(degrees) ((degrees * (float)M_PI) / 180.0f) float dist //半径NSInteger maxCirNum  //圆个数 for (int i= 1; i&amp;lt;=_maxCirNum;i++) &amp;#123; 	float an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ios之随机圆的动画效果">
+<meta property="og:url" content="http://yoursite.com/2017/09/25/ios之随机圆的动画效果/index.html">
 <meta property="og:site_name" content="波澜海底心">
+<meta property="og:description" content="iOS之两圆之间标准圆的随机生成
+1234567891011121314#define degreesToRadians(degrees) ((degrees * (float)M_PI) / 180.0f) float dist //半径NSInteger maxCirNum  //圆个数 for (int i= 1; i&amp;lt;=_maxCirNum;i++) &amp;#123; 	float an">
+<meta property="og:updated_time" content="2017-12-27T06:24:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="波澜海底心">
+<meta name="twitter:title" content="ios之随机圆的动画效果">
+<meta name="twitter:description" content="iOS之两圆之间标准圆的随机生成
+1234567891011121314#define degreesToRadians(degrees) ((degrees * (float)M_PI) / 180.0f) float dist //半径NSInteger maxCirNum  //圆个数 for (int i= 1; i&amp;lt;=_maxCirNum;i++) &amp;#123; 	float an">
   
     <link rel="alternative" href="/atom.xml" title="波澜海底心" type="application/atom+xml">
   
@@ -186,101 +193,100 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-ios之随机圆的动画效果" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/09/25/ios之随机圆的动画效果/" class="article-date">
+  	<time datetime="2017-09-24T16:00:00.000Z" itemprop="datePublished">2017-09-25</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ios之随机圆的动画效果
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/13/ios之app初级设计架构/" class="archive-article-date">
-  	<time datetime="2017-01-12T16:00:00.000Z" itemprop="datePublished">Jan 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/13/ios之app初级设计架构/">ios之app初级设计架构</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/erduoniba/HDRandomViewDemo" target="_blank" rel="external">iOS之两圆之间标准圆的随机生成</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#define degreesToRadians(degrees) ((degrees * (float)M_PI) / 180.0f) </div><div class="line"></div><div class="line">float dist //半径</div><div class="line">NSInteger maxCirNum  //圆个数</div><div class="line"></div><div class="line"> for (int i= 1; i&lt;=_maxCirNum;i++) &#123;</div><div class="line"></div><div class="line"> 	float angle = degreesToRadians((360 / _maxCirNum) * i); //角度</div><div class="line">        </div><div class="line">        float y = cos(angle) * dist;     </div><div class="line">        float x = sin(angle) * dist;</div><div class="line">        // 距中心的x,y坐标</div><div class="line">        </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/05/swift基础学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">swift基础学习</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/06/ios学习之runtime/" class="archive-article-date">
-  	<time datetime="2017-01-05T16:00:00.000Z" itemprop="datePublished">Jan 6</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/06/ios学习之runtime/">ios学习之runtime</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/05/谈我的学习工作之路/" class="archive-article-date">
-  	<time datetime="2017-01-05T07:43:42.000Z" itemprop="datePublished">Jan 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/05/谈我的学习工作之路/">谈谈我的学习工作之路</a>
-    </h1>
-  
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ios之随机圆的动画效果" data-title="ios之随机圆的动画效果" data-url="http://yoursite.com/2017/09/25/ios之随机圆的动画效果/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
